@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/assets/main.css */
+@font-face {
+    font-family: 'baby';
+    src: url('@/assets/fonts/baby.ttf') format('truetype'); /* Ajusta la ruta y el formato según sea necesario */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
