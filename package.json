@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.1.5",
     "animate.css": "^4.1.1",
     "lucide-vue-next": "^0.439.0",
     "vue": "^3.4.29",

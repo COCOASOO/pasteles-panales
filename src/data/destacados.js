@@ -1,9 +1,9 @@
 export const products = [
   {
     id: 1,
-    name: "Quantum X Headphones",
-    description: "Experience audio like never before with our noise-cancelling technology.",
-    price: 299.99,
+    name: "Castillo de pañales",
+    description: "Sorprende con este original regalo para baby shower: un castillo mágico hecho de pañales, decorado con accesorios para bebé.",
+    price: 45,
     image: "/patocastillo.jpg",
     rating: 5,
     reviews: 128,
@@ -11,19 +11,19 @@ export const products = [
   },
   {
     id: 2,
-    name: "UltraSlim Pro Laptop",
-    description: "Powerful performance in an incredibly thin and light design.",
-    price: 1499.99,
+    name: "Guitarra eléctrica de pañales",
+    description: "Sorprende con este original pastel de pañales en forma de guitarra eléctrica, perfecto para padres músicos o amantes del rock.",
+    price: 60,
     image: "/guitarra.jpg",
     rating: 4,
     reviews: 89,
-    featured: false
+    featured: true
   },
   {
     id: 3,
-    name: "SmartLife Watch",
-    description: "Your personal health and fitness companion on your wrist.",
-    price: 199.99,
+    name: "Raqueta de pádel de pañales",
+    description: "Pastel de pañales único en forma de raqueta de pádel, ideal para baby showers de padres deportistas o aficionados al pádel.",
+    price: 50,
     image: "/raqueta.jpg",
     rating: 4,
     reviews: 210,
@@ -31,9 +31,9 @@ export const products = [
   },
   {
     id: 4,
-    name: "SmartLife Watch",
-    description: "Your personal health and fitness companion on your wrist.",
-    price: 199.99,
+    name: "Caramelo gigante de pañales",
+    description: "Dulce sorpresa para el bebé: un pastel de pañales en forma de caramelo gigante, decorado con cintas y accesorios coloridos.",
+    price: 15,
     image: "/caramelo.jpg",
     rating: 4,
     reviews: 210,

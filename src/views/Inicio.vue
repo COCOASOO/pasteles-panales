@@ -1,6 +1,6 @@
 <template>
   <!-- border-2 border-color-blue -->
-  <div class="container-expanded mx-auto bg-grisCaliente">
+  <div class="container-expanded mx-auto bg-gradient-to-b from-grisCaliente to-grisCalienteSuave">
     <Bienvenido />
     <Explicacion />
     <ProductosLanding />

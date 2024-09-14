@@ -11,7 +11,7 @@
             <h3 class="text-lg font-semibold mb-1">{{ product.name }}</h3>
             <p class="text-gray-600 text-sm mb-2">{{ product.description }}</p>
             <div class="flex justify-between items-center">
-              <span class="text-md font-bold text-blue-600">${{ product.price.toFixed(2) }}</span>
+              <span class="text-md font-bold text-blue-600">{{ product.price.toFixed(2) }}€</span>
               <router-link :to="`/producto/${product.id}`" class="bg-blue-500 text-white text-sm font-bold py-1 px-3 rounded hover:bg-blue-600 transition duration-300">
                 Ver Detalles
               </router-link>
