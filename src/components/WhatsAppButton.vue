@@ -9,14 +9,14 @@ export default {
   name: 'WhatsAppButton',
   data() {
     return {
-      phoneNumber: '664377198', // Reemplaza con el número de teléfono deseado
+      phoneNumber: '664377198', // Reemplaza con el número de teléfono deseado (sin el '+')
       message: '¡Hola! Me interesa saber más sobre sus productos para bebés. ¿Podría darme más información?'
     }
   },
   computed: {
     whatsappLink() {
       const encodedMessage = encodeURIComponent(this.message);
-      return `https://wa.me/${this.phoneNumber}?text=${encodedMessage}`;
+      return `https://api.whatsapp.com/send?phone=${this.phoneNumber}&text=${encodedMessage}`;
     }
   }
 }

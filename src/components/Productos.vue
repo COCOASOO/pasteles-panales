@@ -21,9 +21,14 @@
                 </li>
               </ul>
             </div>
-            <button @click="mostrarDetalles(producto)" class="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              Ver detalles
-            </button>
+            <div class="flex justify-between mt-4">
+              <button @click="mostrarDetalles(producto)" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Ver detalles
+              </button>
+              <button @click="comprarProducto(producto.id)" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                Comprar
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -58,7 +63,7 @@ export default {
   name: 'Productos',
   data() {
     return {
-      gruposDeProductos,
+      gruposDeProductos: gruposDeProductos,
       productoSeleccionado: null
     }
   },
@@ -68,6 +73,12 @@ export default {
     },
     cerrarDetalles() {
       this.productoSeleccionado = null;
+    },
+    comprarProducto(productoId) {
+      this.$router.push({
+        name: 'ProcesoPago',
+        params: { productoId: productoId.toString() }
+      })
     }
   }
 }
