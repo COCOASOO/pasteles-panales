@@ -53,6 +53,13 @@
       <div v-if="mensajeEnviado" class="mt-4 text-green-600">
         Se ha abierto WhatsApp. Si no ves la ventana, por favor verifica que no esté minimizada o detrás de otras ventanas.
       </div>
+
+      <!-- Nuevo disclaimer -->
+      <div class="mt-8 bg-gray-100 border-l-4 border-gray-500 text-gray-700 p-6 rounded-r-lg">
+        <p class="text-sm text-justify">
+          <strong>Aviso importante:</strong> Este servicio es proporcionado por un particular y no por una empresa. Todos los pedidos y transacciones se realizan de manera individual y personalizada.
+        </p>
+      </div>
     </div>
   </template>
   

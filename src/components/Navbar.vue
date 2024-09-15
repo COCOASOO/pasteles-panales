@@ -10,7 +10,7 @@
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-2 w-52 p-1 shadow">
           <li>
-            <router-link to="/" class="text-azulNavbar font-semibold transition-colors font-baby"
+            <router-link to="/" class="text-azulNavbar font-semibold transition-colors"
               exact-active-class="font-bold">
               Inicio
             </router-link>
@@ -18,13 +18,13 @@
           <li>
             <router-link to="/productos" class="text-azulNavbar font-semibold transition-colors"
               exact-active-class="font-bold">
-              Pasteles de pañales
+              Productos
             </router-link>
           </li>
           <li>
             <router-link to="/como-lo-hacemos" class="text-azulNavbar font-semibold transition-colors"
               exact-active-class="font-bold">
-              ¿Cómo lo hacemos?
+              Proceso de pedido
             </router-link>
           </li>
           <li>
@@ -37,7 +37,7 @@
       </div>
       <router-link to="/" class="btn btn-link no-underline font-semibold normal-case text-xl text-azulNavbar p-0 font-baby"
         exact-active-class="font-bold">
-        Mi Sitio
+        PañalPastel
       </router-link>
     </div>
     <!--PC-->
@@ -55,7 +55,7 @@
         </li>
         <li>
           <router-link to="/como-lo-hacemos" class="text-azulNavbar font-semibold transition-colors text-xl font-baby">
-            ¿Cómo lo hacemos?
+            Proceso de pedido
           </router-link>
         </li>
         <li>

@@ -1,51 +1,67 @@
 export const gruposDeProductos = [
   {
-    nombre: 'Productos de 18€',
+    nombre: 'Detalles simples',
     productos: [
       {
         id: 1,
-        nombre: 'Ensalada César',
-        descripcion: 'Lechuga fresca con pollo a la parrilla, crutones y aderezo César',
+        nombre: 'Caramelo',
+        descripcion: 'Un dulce detalle en forma de caramelo.',
         precioBase: 18,
-        imagen: '/patocastillo.jpg',
+        imagen: '/caramelo.jpg',
+        orientacionImagen: 'horizontal',
         opciones: [
           { id: 1, nombre: 'Agregar bacon', precio: 2 },
           { id: 2, nombre: 'Doble porción de pollo', precio: 3 },
         ]
       },
       {
-        id: 2,
-        nombre: 'Pizza Margarita',
-        descripcion: 'Pizza clásica con salsa de tomate, mozzarella y albahaca',
-        precioBase: 18,
-        imagen: '/raqueta.jpg',
+        id: 10,
+        nombre: 'Moto',
+        descripcion: 'Sobre ruedas.',
+        precioBase: 30,
+        imagen: '/moto.jpg',
+        orientacionImagen: 'horizontal',
         opciones: [
-          { id: 3, nombre: 'Borde relleno de queso', precio: 2 },
-          { id: 4, nombre: 'Tamaño familiar', precio: 4 },
+          { id: 1, nombre: 'Agregar bacon', precio: 2 },
+          { id: 2, nombre: 'Doble porción de pollo', precio: 3 },
         ]
-      }
+      },
+      {
+        id: 11,
+        nombre: 'Batería',
+        descripcion: '¡Para los amantes del rock!',
+        precioBase: 30,
+        imagen: '/bateria.jpg',
+        orientacionImagen: 'horizontal',
+        opciones: [
+          { id: 1, nombre: 'Agregar bacon', precio: 2 },
+          { id: 2, nombre: 'Doble porción de pollo', precio: 3 },
+        ]
+      },
     ]
   },
   {
-    nombre: 'Productos de 25€',
+    nombre: 'Pasteles de pañales',
     productos: [
       {
-        id: 3,
-        nombre: 'Sushi Combo',
-        descripcion: 'Selección variada de 16 piezas de sushi',
+        id: 2,
+        nombre: 'Pastel de 2 pisos',
+        descripcion: 'De 2 pisos',
         precioBase: 25,
-        imagen: '/guitarra.jpg',
+        imagen: '/2pisos1.jpg',
+        orientacionImagen: 'vertical',
         opciones: [
           { id: 5, nombre: 'Agregar sashimi', precio: 5 },
           { id: 6, nombre: 'Incluir tempura', precio: 7 },
         ]
       },
       {
-        id: 4,
-        nombre: 'Parrillada de Carnes',
-        descripcion: 'Selección de carnes a la parrilla con guarnición',
-        precioBase: 25,
-        imagen: '/caramelo.jpg',
+        id: 3,
+        nombre: 'Pastel de 3 pisos',
+        descripcion: 'De 3 pisos',
+        precioBase: 30,
+        imagen: '/3pisos1.jpg',
+        orientacionImagen: 'vertical',
         opciones: [
           { id: 7, nombre: 'Agregar chorizo', precio: 3 },
           { id: 8, nombre: 'Incluir salsa chimichurri', precio: 2 },
@@ -54,30 +70,110 @@ export const gruposDeProductos = [
     ]
   },
   {
-    nombre: 'Productos de 30€',
+    nombre: 'Detalles elaborados',
     productos: [
       {
-        id: 5,
-        nombre: 'Menú Degustación',
-        descripcion: 'Menú de 5 platos con maridaje de vinos',
+        id: 4,
+        nombre: 'Castillo mediano',
+        descripcion: 'De base redonda.',
         precioBase: 30,
-        imagen: '/castillo.jpg',
+        imagen: '/castillomediano.jpg',
+        orientacionImagen: 'horizontal',
         opciones: [
           { id: 9, nombre: 'Postre especial', precio: 5 },
           { id: 10, nombre: 'Cata de quesos', precio: 8 },
         ]
       },
       {
+        id: 5,
+        nombre: 'Castillo grande',
+        descripcion: 'De base rectangular.',
+        precioBase: 45,
+        imagen: '/castillogrande.jpg',
+        orientacionImagen: 'horizontal',
+        opciones: [
+          { id: 11, nombre: 'Agregar langosta', precio: 15 },
+          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
+        ]
+      },
+      {
         id: 6,
-        nombre: 'Mariscada',
-        descripcion: 'Selección de mariscos frescos del día',
-        precioBase: 30,
-        imagen: '/guita.png',
+        nombre: 'Carrito de bebé',
+        descripcion: 'Una cesta original.',
+        precioBase: 50,
+        imagen: '/carro.jpg',
+        orientacionImagen: 'horizontal',
+        opciones: [
+          { id: 11, nombre: 'Agregar langosta', precio: 15 },
+          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
+        ]
+      },
+      {
+        id: 7,
+        nombre: 'Coche',
+        descripcion: 'Sobre ruedas.',
+        precioBase: 50,
+        imagen: '/coche.jpg',
+        orientacionImagen: 'horizontal',
+        opciones: [
+          { id: 11, nombre: 'Agregar langosta', precio: 15 },
+          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
+        ]
+      },
+      {
+        id: 12,
+        nombre: 'Guitarra',
+        descripcion: 'Para futuros músicos.',
+        precioBase: 50,
+        imagen: '/guitarra.jpg',
+        orientacionImagen: 'horizontal',
+        opciones: [
+          { id: 11, nombre: 'Agregar langosta', precio: 15 },
+          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
+        ]
+      },
+      {
+        id: 12,
+        nombre: 'Raqueta de pádel',
+        descripcion: 'Para futuros deportistas.',
+        precioBase: 50,
+        imagen: '/raqueta.jpg',
+        orientacionImagen: 'horizontal',
+        opciones: [
+          { id: 11, nombre: 'Agregar langosta', precio: 15 },
+          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
+        ]
+      },
+      {
+        id: 13,
+        nombre: 'Artes marciales',
+        descripcion: 'Para competidores.',
+        precioBase: 50,
+        imagen: '/ring2.jpg',
+        orientacionImagen: 'horizontal',
         opciones: [
           { id: 11, nombre: 'Agregar langosta', precio: 15 },
           { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
         ]
       }
+    ]
+  },
+  {
+    nombre: 'Detalles personalizados',
+    productos: [
+      {
+        id: 8,
+        nombre: 'Tu idea hecha regalo',
+        descripcion: 'Creamos un regalo único basado en tu concepto. Tú lo imaginas, nosotros lo hacemos realidad.',
+        precioBase: 60,
+        imagen: '/regalo.png',
+        orientacionImagen: 'horizontal',
+        opciones: [
+          { id: 9, nombre: 'Postre especial', precio: 5 },
+          { id: 10, nombre: 'Cata de quesos', precio: 8 },
+        ]
+      },
+      
     ]
   }
 ];

@@ -1,12 +1,10 @@
 <template>
   <div class="min-h-screen bg-azulBebe bg-opacity-75 py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
       <div class="md:flex">
-        <div class="md:flex-shrink-0">
-          <img class="h-full w-full object-cover md:w-96" src="/guita.png" alt="Imagen de contacto">
-        </div>
+        
         <div class="p-8">
-          <h1 class="text-4xl font-bold text-gray-800 mb-6">Contacto</h1>
+          <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center font-baby">Contacto</h1>
           
           <section class="mb-8">
             <h2 class="text-2xl font-semibold text-gray-700 mb-4">Quiénes Somos</h2>

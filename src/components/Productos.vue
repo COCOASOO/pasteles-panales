@@ -14,7 +14,7 @@
           >
           <div class="flex justify-between">
             <span>0€</span>
-            <span>{{ precioMaximo }}€</span>
+            <span>{{ precioMaximo }}€ </span>
           </div>
         </div>
       </div>
@@ -24,7 +24,11 @@
         <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <div v-for="producto in grupo.productos" :key="producto.id" 
                class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:scale-105">
-            <img :src="producto.imagen" :alt="producto.nombre" class="w-full h-48 object-cover">
+            <img :src="producto.imagen" :alt="producto.nombre" 
+                 :class="[ 
+                   'w-full object-cover',
+                   producto.orientacionImagen === 'vertical' ? 'h-96' : 'h-72'
+                 ]">
             <div class="p-4">
               <h3 class="text-xl font-semibold mb-2 text-gray-800">{{ producto.nombre }}</h3>
               <p class="text-gray-600 mb-4 line-clamp-2">{{ producto.descripcion }}</p>
