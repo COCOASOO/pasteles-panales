@@ -14,7 +14,7 @@
           >
           <div class="flex justify-between">
             <span>0€</span>
-            <span>{{ precioMaximo }}€</span>
+            <span>{{ precioMaximo }}€ </span>
           </div>
         </div>
       </div>
