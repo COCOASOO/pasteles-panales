@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="text-center mt-12">
-        <router-link to="/como-lo-hacemos" class="btn btn-lg bg-azulOscuro text-white hover:bg-rosaFuerte hover:scale-105 transition-transform duration-300 text-xl px-8 py-4">Ver todos los productos</router-link>
+        <router-link to="/productos" class="btn btn-lg bg-azulOscuro text-white hover:bg-rosaFuerte hover:scale-105 transition-transform duration-300 text-xl px-8 py-4">Ver todos los productos</router-link>
       </div>
     </div>
   </section>

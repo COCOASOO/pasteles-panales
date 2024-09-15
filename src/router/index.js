@@ -20,7 +20,18 @@ const routes = [
     path: '/proceso-pago/:productoId',
     name: 'ProcesoPago',
     component: ProcesoPago,
-    props: true
+    props: true,
+    beforeEnter: (to, from, next) => {
+      if (from.name !== 'paginaProductos') {
+        next({ name: 'home' });
+      } else {
+        next();
+      }
+    }
+  },
+  {
+    path: '/proceso-pago',
+    redirect: { name: 'home' }
   },
   {
     path: '/como-lo-hacemos',
