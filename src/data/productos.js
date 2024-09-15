@@ -163,28 +163,17 @@ export const gruposDeProductos = [
     productos: [
       {
         id: 8,
-        nombre: 'Castillo mediano',
-        descripcion: 'De base redonda.',
-        precioBase: 30,
-        imagen: '/castillomediano.jpg',
+        nombre: 'Tu idea hecha regalo',
+        descripcion: 'Creamos un regalo único basado en tu concepto. Tú lo imaginas, nosotros lo hacemos realidad.',
+        precioBase: 60,
+        imagen: '/regalo.png',
         orientacionImagen: 'horizontal',
         opciones: [
           { id: 9, nombre: 'Postre especial', precio: 5 },
           { id: 10, nombre: 'Cata de quesos', precio: 8 },
         ]
       },
-      {
-        id: 9,
-        nombre: 'Castillo grande',
-        descripcion: 'De base rectangular.',
-        precioBase: 30,
-        imagen: '/castillogrande.jpg',
-        orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 11, nombre: 'Agregar langosta', precio: 15 },
-          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
-        ]
-      }
+      
     ]
   }
 ];
