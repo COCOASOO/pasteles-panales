@@ -4,8 +4,9 @@
       <h2 class="text-3xl font-bold text-center mb-10">Nuestros Pasteles Destacados</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <div v-for="product in featuredProducts" :key="product.id" 
-             class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col"
-             v-observe-visibility="onVisibilityChange">
+             class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col cursor-pointer"
+             v-observe-visibility="onVisibilityChange"
+             @click="navigateToProducts">
           <img :src="product.image" :alt="product.name" class="w-full h-60 object-cover">
           <div class="p-3 flex flex-col flex-grow">
             <h3 class="text-lg font-semibold mb-1">{{ product.name }}</h3>
@@ -25,6 +26,7 @@
 
 <script>
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { products } from '@/data/destacados'
 import { ObserveVisibility } from 'vue-observe-visibility'
 
@@ -35,11 +37,11 @@ export default {
   },
   setup() {
     const featuredProducts = ref([])
+    const router = useRouter()
 
     onMounted(() => {
-      // Asegurarse de que los productos se carguen inmediatamente
       featuredProducts.value = products.slice(0, 6)
-      console.log('Productos cargados:', featuredProducts.value) // Para depuración
+      console.log('Productos cargados:', featuredProducts.value)
     })
 
     const onVisibilityChange = (isVisible, entry) => {
@@ -48,7 +50,12 @@ export default {
       }
     }
 
-    return { featuredProducts, onVisibilityChange }
+    const navigateToProducts = () => {
+      console.log('Navegando a productos...')
+      router.push('/productos')
+    }
+
+    return { featuredProducts, onVisibilityChange, navigateToProducts }
   }
 }
 </script>
@@ -61,6 +68,7 @@ export default {
   opacity: 1;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .product-card.is-visible {
