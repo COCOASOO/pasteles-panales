@@ -4,17 +4,14 @@
       <h2 class="text-3xl font-bold text-center mb-10">Nuestros Pasteles Destacados</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <div v-for="product in featuredProducts" :key="product.id" 
-             class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl"
+             class="product-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl flex flex-col"
              v-observe-visibility="onVisibilityChange">
           <img :src="product.image" :alt="product.name" class="w-full h-60 object-cover">
-          <div class="p-3">
+          <div class="p-3 flex flex-col flex-grow">
             <h3 class="text-lg font-semibold mb-1">{{ product.name }}</h3>
-            <p class="text-gray-600 text-sm mb-2">{{ product.description }}</p>
-            <div class="flex justify-between items-center">
+            <p class="text-gray-600 text-sm mb-2 flex-grow">{{ product.description }}</p>
+            <div class="mt-auto">
               <span class="text-md font-bold text-blue-600">{{ product.price.toFixed(2) }}€</span>
-              <router-link :to="`/producto/${product.id}`" class="bg-blue-500 text-white text-sm font-bold py-1 px-3 rounded hover:bg-blue-600 transition duration-300">
-                Ver Detalles
-              </router-link>
             </div>
           </div>
         </div>
@@ -58,8 +55,11 @@ export default {
 
 <style scoped>
 .product-card {
-  opacity: 1; /* Cambiado de 0 a 1 para asegurar que sean visibles */
-  transform: translateY(0); /* Reseteado a 0 */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+  opacity: 1;
+  transform: translateY(0);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
