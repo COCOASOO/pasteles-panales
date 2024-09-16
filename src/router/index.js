@@ -42,6 +42,11 @@ const routes = [
     path: '/contacto',
     name: 'contacto',
     component: Contacto
+  },
+  // Add this new route at the end
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: { name: 'home' }
   }
 ]
 

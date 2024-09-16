@@ -9,18 +9,29 @@
           <section class="mb-8">
             <h2 class="text-2xl font-semibold text-gray-700 mb-4">Quiénes Somos</h2>
             <p class="text-gray-600 leading-relaxed">
-              Somos una empresa innovadora especializada en desarrollo web y móvil. Nuestra misión es crear soluciones digitales que transformen negocios y mejoren la vida de las personas. 
-              Nos esforzamos por la excelencia técnica, la creatividad y la satisfacción del cliente en cada proyecto que emprendemos.
+              Somos un negocio creativo especializado en la elaboración de pasteles de pañales con diferentes formas y diseños. Nuestra misión es crear regalos únicos y prácticos para padres de recién nacidos, combinando utilidad y belleza en cada creación. 
+              Nos esforzamos por ofrecer detalles originales que sorprendan y emocionen en esos momentos tan especiales.
             </p>
           </section>
           
+          <section class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Contáctanos</h2>
+            <div class="flex items-center mb-4">
+              <span class="mr-2 text-xl">📞</span>
+              <a  class="text-blue-600 hover:text-blue-800 transition duration-300">
+                +34 678 846 424
+              </a>
+            </div>
+            <WhatsAppButton :phone-number="phoneNumber" :message="whatsappMessage" />
+          </section>
+          
           <section>
-            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Enlaces de Contacto</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Síguenos en Instagram</h2>
             <div class="flex flex-wrap gap-4">
-              <a v-for="link in socialLinks" :key="link.name" :href="link.url" target="_blank" 
+              <a :href="instagramLink.url" target="_blank" 
                  class="flex items-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full transition duration-300">
-                <span class="mr-2 text-xl">{{ link.emoji }}</span>
-                {{ link.name }}
+                <span class="mr-2 text-xl">{{ instagramLink.emoji }}</span>
+                {{ instagramLink.name }}
               </a>
             </div>
           </section>
@@ -31,12 +42,11 @@
 </template>
 
 <script setup>
-const socialLinks = [
-  { name: 'LinkedIn', url: 'https://linkedin.com/company/tu-empresa', emoji: '💼' },
-  { name: 'Twitter', url: 'https://twitter.com/tu_empresa', emoji: '🐦' },
-  { name: 'Instagram', url: 'https://instagram.com/tu_empresa', emoji: '📷' },
-  { name: 'GitHub', url: 'https://github.com/tu-empresa', emoji: '💻' },
-];
+import WhatsAppButton from '@/components/WhatsAppButton.vue';
+
+const instagramLink = { name: 'Instagram', url: 'https://www.instagram.com/manuelagragera302/', emoji: '📷' };
+const phoneNumber = '34678846424'; // Sin el '+' al principio
+const whatsappMessage = 'Hola, me gustaría obtener más información sobre sus pasteles de pañales.';
 </script>
 
 <style scoped>
