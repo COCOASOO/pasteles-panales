@@ -9,7 +9,26 @@
 
 <script setup>
 import Navbar from './components/Navbar.vue';
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router';
+import { watch, nextTick } from 'vue';
+
+const route = useRoute();
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+watch(
+  () => route.fullPath,
+  () => {
+    nextTick(() => {
+      scrollToTop();
+    });
+  }
+);
 </script>
 
 <style scoped>

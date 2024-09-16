@@ -1,5 +1,10 @@
 <template>
     <div class="container mx-auto px-4 py-8">
+      <!-- Botón para volver atrás -->
+      <button @click="volverAtras" class="mb-4 px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+        Volver a productos
+      </button>
+
       <h1 class="text-3xl font-bold mb-8">Proceso de Pedido</h1>
       
       <!-- Aviso importante -->
@@ -121,6 +126,9 @@
             alert('No se pudo abrir WhatsApp Web. Por favor, asegúrate de que las ventanas emergentes están permitidas o utiliza las alternativas de contacto proporcionadas.');
           }
         }
+      },
+      volverAtras() {
+        this.$router.push('/productos') // Navigate to the root route
       }
     },
     computed: {
