@@ -33,4 +33,6 @@ export default {
   plugins: [
     require('daisyui'),
   ],
+  // Desactiva completamente el modo oscuro
+  darkMode: false,
 };
