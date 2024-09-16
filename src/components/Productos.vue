@@ -91,6 +91,16 @@
                    'w-full h-full object-cover rounded',
                    productoSeleccionado.orientacionImagen === 'vertical' ? 'aspect-[3/4]' : 'aspect-square'
                  ]">
+            <div v-if="productoSeleccionado.imagenes && productoSeleccionado.imagenes.length > 1" class="absolute inset-y-0 left-0 flex items-center">
+              <button @click="cambiarImagen(productoSeleccionado.id, -1)" class="bg-black bg-opacity-50 text-white p-2 rounded-r">
+                &lt;
+              </button>
+            </div>
+            <div v-if="productoSeleccionado.imagenes && productoSeleccionado.imagenes.length > 1" class="absolute inset-y-0 right-0 flex items-center">
+              <button @click="cambiarImagen(productoSeleccionado.id, 1)" class="bg-black bg-opacity-50 text-white p-2 rounded-l">
+                &gt;
+              </button>
+            </div>
           </div>
           <div :class="[ 
             productoSeleccionado.orientacionImagen === 'vertical' ? 'sm:w-1/2 w-full sm:pl-4' : 'w-full'
