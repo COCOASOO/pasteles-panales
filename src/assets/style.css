@@ -4,27 +4,24 @@
 
 /* src/assets/main.css */
 @font-face {
-    font-family: 'baby';
-    src: url('@/assets/fonts/baby.ttf') format('truetype'); /* Ajusta la ruta y el formato según sea necesario */
-    font-weight: normal;
-    font-style: normal;
+  font-family: "baby";
+  src: url("@/assets/fonts/baby.ttf") format("truetype"); /* Ajusta la ruta y el formato según sea necesario */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Asegura que siempre se mantenga en modo claro */
+html,
+body {
+  background-color: #f4fcff !important; /* Color claro de fondo */
+  color: #003d5b !important; /* Color oscuro de texto */
+}
+
+/* Desactivar el cambio de modo oscuro */
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #f4fcff !important;
+    color: #003d5b !important;
   }
-  :root {
-    color-scheme: light;
-  }
-  
-  /* También puedes aplicar un fallback para el modo oscuro */
-  @media (prefers-color-scheme: dark) {
-    html, body {
-      background-color: #f4fcff !important; /* Color de fondo claro */
-      color: #003D5B !important; /* Color de texto oscuro */
-    }
-  
-    /* Aplica cualquier otro ajuste necesario */
-    /* Por ejemplo, si tienes secciones, headers, etc. */
-    header, section, footer {
-      background-color: #f4fcff !important; /* Color de fondo claro para todas las secciones */
-      color: #003D5B !important; /* Color de texto oscuro */
-    }
-  }
-  
+}
