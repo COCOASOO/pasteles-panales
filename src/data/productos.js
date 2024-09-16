@@ -5,38 +5,26 @@ export const gruposDeProductos = [
       {
         id: 1,
         nombre: 'Caramelo',
-        descripcion: 'Un dulce detalle en forma de caramelo.',
+        descripcion: "Dulce sorpresa para el bebé: un pastel de pañales en forma de caramelo gigante, decorado con cintas y accesorios coloridos.",
         precioBase: 18,
-        imagen: '/caramelo.jpg',
+        imagenes: ['/caramelo.jpg', '/caramelo2.jpg'],
         orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 1, nombre: 'Agregar bacon', precio: 2 },
-          { id: 2, nombre: 'Doble porción de pollo', precio: 3 },
-        ]
       },
       {
-        id: 10,
+        id: 2,
         nombre: 'Moto',
         descripcion: 'Sobre ruedas.',
         precioBase: 30,
-        imagen: '/moto.jpg',
+        imagenes: ['/moto.jpg'],
         orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 1, nombre: 'Agregar bacon', precio: 2 },
-          { id: 2, nombre: 'Doble porción de pollo', precio: 3 },
-        ]
       },
       {
-        id: 11,
+        id: 3,
         nombre: 'Batería',
         descripcion: '¡Para los amantes del rock!',
         precioBase: 30,
-        imagen: '/bateria.jpg',
+        imagenes: ['/bateria.jpg','/bateria2.jpg'],
         orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 1, nombre: 'Agregar bacon', precio: 2 },
-          { id: 2, nombre: 'Doble porción de pollo', precio: 3 },
-        ]
       },
     ]
   },
@@ -44,27 +32,27 @@ export const gruposDeProductos = [
     nombre: 'Pasteles de pañales',
     productos: [
       {
-        id: 2,
+        id: 4,
         nombre: 'Pastel de 2 pisos',
         descripcion: 'De 2 pisos',
         precioBase: 25,
-        imagen: '/2pisos1.jpg',
+        imagenes: ['/2pisos2.jpg','/2pisos1.jpg','/2pisos3.jpg',],
         orientacionImagen: 'vertical',
         opciones: [
-          { id: 5, nombre: 'Agregar sashimi', precio: 5 },
-          { id: 6, nombre: 'Incluir tempura', precio: 7 },
+          { id: 1, nombre: 'Agregar 2 detalles', precio: 5 },
+          { id: 2, nombre: 'Agregar 5 detalles', precio: 10 },
         ]
       },
       {
-        id: 3,
+        id: 5,
         nombre: 'Pastel de 3 pisos',
         descripcion: 'De 3 pisos',
         precioBase: 30,
-        imagen: '/3pisos1.jpg',
+        imagenes: ['/3pisos1.jpg','/3pisos2.jpg','/3pisos3.jpg','/3pisos4.jpg'],
         orientacionImagen: 'vertical',
         opciones: [
-          { id: 7, nombre: 'Agregar chorizo', precio: 3 },
-          { id: 8, nombre: 'Incluir salsa chimichurri', precio: 2 },
+          { id: 3, nombre: 'Agregar 2 detalles', precio: 5 },
+          { id: 4, nombre: 'Agregar 5 detalles', precio: 10 },
         ]
       }
     ]
@@ -73,87 +61,68 @@ export const gruposDeProductos = [
     nombre: 'Detalles elaborados',
     productos: [
       {
-        id: 4,
+        id: 6,
         nombre: 'Castillo mediano',
         descripcion: 'De base redonda.',
-        precioBase: 30,
-        imagen: '/castillomediano.jpg',
+        precioBase: 35,
+        imagenes: ['/castillomediano.jpg','/castillomediano2.jpg','/castillomediano3.jpg'],
         orientacionImagen: 'horizontal',
         opciones: [
-          { id: 9, nombre: 'Postre especial', precio: 5 },
-          { id: 10, nombre: 'Cata de quesos', precio: 8 },
-        ]
-      },
-      {
-        id: 5,
-        nombre: 'Castillo grande',
-        descripcion: 'De base rectangular.',
-        precioBase: 45,
-        imagen: '/castillogrande.jpg',
-        orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 11, nombre: 'Agregar langosta', precio: 15 },
-          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
-        ]
-      },
-      {
-        id: 6,
-        nombre: 'Carrito de bebé',
-        descripcion: 'Una cesta original.',
-        precioBase: 50,
-        imagen: '/carro.jpg',
-        orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 11, nombre: 'Agregar langosta', precio: 15 },
-          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
+          { id: 5, nombre: 'Agregar 2 detalles', precio: 5 },
         ]
       },
       {
         id: 7,
+        nombre: 'Castillo grande',
+        descripcion: 'De base rectangular.',
+        precioBase: 45,
+        imagenes: ['/castillogrande.jpg','/castillogrande2.jpg'],
+        orientacionImagen: 'horizontal',
+        opciones: [
+          { id: 6, nombre: 'Agregar 2 detalles', precio: 5 }
+        ]
+      },
+      {
+        id: 8,
+        nombre: 'Carrito de bebé',
+        descripcion: 'Una cesta original.',
+        precioBase: 50,
+        imagenes: ['/carro.jpg','/carrito2.jpg','/carrito3.jpg'],
+        orientacionImagen: 'horizontal',
+      },
+      {
+        id: 9,
         nombre: 'Coche',
         descripcion: 'Sobre ruedas.',
         precioBase: 50,
-        imagen: '/coche.jpg',
+        imagenes: ['/coche.jpg','/coche2.jpg'],
         orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 11, nombre: 'Agregar langosta', precio: 15 },
-          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
-        ]
       },
       {
-        id: 12,
+        id: 10,
         nombre: 'Guitarra',
         descripcion: 'Para futuros músicos.',
         precioBase: 50,
-        imagen: '/guitarra.jpg',
+        imagenes: ['/guitarra.jpg'],
         orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 11, nombre: 'Agregar langosta', precio: 15 },
-          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
-        ]
       },
       {
-        id: 12,
+        id: 11,
         nombre: 'Raqueta de pádel',
         descripcion: 'Para futuros deportistas.',
         precioBase: 50,
-        imagen: '/raqueta.jpg',
+        imagenes: ['/raqueta.jpg','/raqueta2.jpg'],
         orientacionImagen: 'horizontal',
-        opciones: [
-          { id: 11, nombre: 'Agregar langosta', precio: 15 },
-          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
-        ]
       },
       {
-        id: 13,
+        id: 12,
         nombre: 'Artes marciales',
         descripcion: 'Para competidores.',
         precioBase: 50,
-        imagen: '/ring2.jpg',
+        imagenes: ['/ring2.jpg','/ring1.jpg'],
         orientacionImagen: 'horizontal',
         opciones: [
-          { id: 11, nombre: 'Agregar langosta', precio: 15 },
-          { id: 12, nombre: 'Incluir botella de vino blanco', precio: 10 },
+          { id: 7, nombre: 'Agregar 2 detalles', precio: 5 },
         ]
       }
     ]
@@ -162,18 +131,17 @@ export const gruposDeProductos = [
     nombre: 'Detalles personalizados',
     productos: [
       {
-        id: 8,
+        id: 13,
         nombre: 'Tu idea hecha regalo',
         descripcion: 'Creamos un regalo único basado en tu concepto. Tú lo imaginas, nosotros lo hacemos realidad.',
         precioBase: 60,
-        imagen: '/regalo.png',
+        imagenes: ['/regalo.png'],
         orientacionImagen: 'horizontal',
         opciones: [
-          { id: 9, nombre: 'Postre especial', precio: 5 },
-          { id: 10, nombre: 'Cata de quesos', precio: 8 },
+          { id: 8, nombre: 'Agregar 2 detalles', precio: 5 },
+          { id: 9, nombre: 'Agregar 5 detalles', precio: 10 },
         ]
       },
-      
     ]
   }
 ];
