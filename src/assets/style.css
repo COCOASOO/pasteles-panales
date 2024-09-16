@@ -9,10 +9,22 @@
     font-weight: normal;
     font-style: normal;
   }
+  :root {
+    color-scheme: light;
+  }
   
+  /* También puedes aplicar un fallback para el modo oscuro */
   @media (prefers-color-scheme: dark) {
-    :root {
-      color-scheme: light;
+    html, body {
+      background-color: #f4fcff !important; /* Color de fondo claro */
+      color: #003D5B !important; /* Color de texto oscuro */
+    }
+  
+    /* Aplica cualquier otro ajuste necesario */
+    /* Por ejemplo, si tienes secciones, headers, etc. */
+    header, section, footer {
+      background-color: #f4fcff !important; /* Color de fondo claro para todas las secciones */
+      color: #003D5B !important; /* Color de texto oscuro */
     }
   }
   
