@@ -2,7 +2,7 @@
   <div class="min-h-screen p-6">
     <div class="max-w-7xl mx-auto">
       <!-- Filtros -->
-      <div class="mb-8 bg-white shadow-md rounded-lg p-6">
+      <div class="mb-8 bg-white dark:bg-white shadow-md rounded-lg p-6">
         <div class="flex flex-wrap gap-6">
           <!-- Filtro de precio -->
           <div class="flex-1 min-w-[250px]">
