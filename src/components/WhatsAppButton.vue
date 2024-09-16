@@ -9,7 +9,7 @@ export default {
   name: 'WhatsAppButton',
   data() {
     return {
-      phoneNumber: '664377198', // Reemplaza con el número de teléfono deseado (sin el '+')
+      phoneNumber: '678846424', // Reemplaza con el número de teléfono deseado (sin el '+')
       message: '¡Hola! Me interesa saber más sobre sus productos para bebés. ¿Podría darme más información?'
     }
   },
