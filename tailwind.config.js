@@ -1,10 +1,7 @@
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -24,15 +21,16 @@ export default {
         gris: "#E9E9E9",
       },
       fontFamily: {
-        fascinate: ['"Fascinate Inline"', 'cursive'],
-        guerrilla: ['"Protest Guerrilla"', 'sans-serif'],
-        baby: ['baby', 'sans-serif'],
-      }
+        fascinate: ['"Fascinate Inline"', "cursive"],
+        guerrilla: ['"Protest Guerrilla"', "sans-serif"],
+        baby: ["baby", "sans-serif"],
+      },
     },
   },
-  plugins: [
-    require('daisyui'),
-  ],
+  plugins: [require("daisyui")],
   // Desactiva completamente el modo oscuro
-  darkMode: false,
+  darkMode: false, // Asegurarte que el modo oscuro está deshabilitado
+  daisyui: {
+    themes: false, // Desactivar los temas de DaisyUI
+  },
 };
