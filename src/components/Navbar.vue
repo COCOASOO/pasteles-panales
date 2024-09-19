@@ -28,17 +28,18 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/contacto" class="text-azulNavbar font-semibold transition-colors"
-              exact-active-class="font-bold">
-              Contacto
-            </router-link>
-          </li>
-          <li>
             <router-link to="/blog" class="text-azulNavbar font-semibold transition-colors"
               exact-active-class="font-bold">
               Blog
             </router-link>
           </li>
+          <li>
+            <router-link to="/contacto" class="text-azulNavbar font-semibold transition-colors"
+              exact-active-class="font-bold">
+              Contacto
+            </router-link>
+          </li>
+          
         </ul>
       </div>
       <router-link to="/" class="btn btn-link no-underline font-semibold normal-case text-xl text-azulNavbar p-0 font-baby"
@@ -65,15 +66,16 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/contacto" class="text-azulNavbar font-semibold transition-colors text-xl font-baby">
-            Contacto
-          </router-link>
-        </li>
-        <li>
           <router-link to="/blog" class="text-azulNavbar font-semibold transition-colors text-xl font-baby">
             Blog
           </router-link>
         </li>
+        <li>
+          <router-link to="/contacto" class="text-azulNavbar font-semibold transition-colors text-xl font-baby">
+            Contacto
+          </router-link>
+        </li>
+        
       </ul>
     </div>
 

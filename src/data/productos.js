@@ -58,7 +58,7 @@ export const gruposDeProductos = [
     ]
   },
   {
-    nombre: 'Detalles elaborados',
+    nombre: 'Castillos de pañales',
     productos: [
       {
         id: 6,
@@ -82,6 +82,11 @@ export const gruposDeProductos = [
           { id: 6, nombre: 'Agregar 2 detalles', precio: 5 }
         ]
       },
+    ]
+  },
+  {
+    nombre: 'Detalles elaborados',
+    productos: [
       {
         id: 8,
         nombre: 'Carrito de bebé',
