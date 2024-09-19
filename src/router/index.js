@@ -7,6 +7,7 @@ import ProcesoPago from '../views/ProcesoPago.vue'
 import DetallesProducto from '@/views/DetallesProducto.vue'
 import Blog from '@/views/Blog.vue'
 import BlogPost from '@/views/BlogPost.vue'
+import CuriosidadPost from '../views/CuriosidadPost.vue'
 
 const routes = [
   {
@@ -60,6 +61,11 @@ const routes = [
     path: '/blog/:id',
     name: 'BlogPost',
     component: BlogPost
+  },
+  {
+    path: '/blog/curiosidad/:id',
+    name: 'CuriosidadPost',
+    component: CuriosidadPost
   },
   {
     path: '/:pathMatch(.*)*',
