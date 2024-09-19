@@ -4,6 +4,9 @@ import Productos from '../views/PaginaProductos.vue'
 import ComoLoHacemos from '../views/ComoLoHacemos.vue'
 import Contacto from '../views/Contacto.vue'
 import ProcesoPago from '../views/ProcesoPago.vue'
+import DetallesProducto from '@/views/DetallesProducto.vue'
+import Blog from '@/views/Blog.vue'
+import BlogPost from '@/views/BlogPost.vue'
 
 const routes = [
   {
@@ -22,7 +25,7 @@ const routes = [
     component: ProcesoPago,
     props: true,
     beforeEnter: (to, from, next) => {
-      if (from.name !== 'paginaProductos') {
+      if (from.name !== 'paginaProductos' && from.name !== 'DetallesProducto') {
         next({ name: 'home' });
       } else {
         next();
@@ -43,7 +46,21 @@ const routes = [
     name: 'contacto',
     component: Contacto
   },
-  // Add this new route at the end
+  {
+    path: '/producto/:id',
+    name: 'DetallesProducto',
+    component: DetallesProducto
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: Blog
+  },
+  {
+    path: '/blog/:id',
+    name: 'BlogPost',
+    component: BlogPost
+  },
   {
     path: '/:pathMatch(.*)*',
     redirect: { name: 'home' }
