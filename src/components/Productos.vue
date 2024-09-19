@@ -72,31 +72,24 @@
     </div>
 
     <!-- Modal para mostrar detalles -->
-    <DetallesProductoModal 
-      v-if="productoSeleccionado" 
-      :producto="productoSeleccionado"
-      @cerrar="cerrarDetalles"
-    />
+    <!-- Eliminamos el componente DetallesProductoModal -->
   </div>
 </template>
 
 <script>
-import { ref, computed, reactive } from 'vue';
+import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { gruposDeProductos } from '@/data/productos.js';
 import ProductoCard from './ProductoCard.vue';
-import DetallesProductoModal from './DetallesProductoModal.vue';
 
 export default {
   name: 'Productos',
   components: {
     ProductoCard,
-    DetallesProductoModal,
   },
   setup() {
     const router = useRouter();
     const precioMaximo = ref(60);
-    const productoSeleccionado = ref(null);
     const ordenSeleccionado = ref('');
 
     const precioMaximoDisponible = computed(() => {
@@ -137,11 +130,10 @@ export default {
     });
 
     const mostrarDetalles = (producto) => {
-      productoSeleccionado.value = producto;
-    };
-
-    const cerrarDetalles = () => {
-      productoSeleccionado.value = null;
+      router.push({
+        name: 'DetallesProducto',
+        params: { id: producto.id.toString() }
+      });
     };
 
     const comprarProducto = (productoId) => {
@@ -156,11 +148,9 @@ export default {
       precioMaximoDisponible,
       gruposFiltrados,
       productosFiltrados,
-      productoSeleccionado,
-      mostrarDetalles,
-      cerrarDetalles,
-      comprarProducto,
       ordenSeleccionado,
+      mostrarDetalles,
+      comprarProducto,
     };
   }
 }
