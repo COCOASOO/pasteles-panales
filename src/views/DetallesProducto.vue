@@ -49,22 +49,99 @@
       <div class="w-full md:w-1/2 px-4">
         <h1 class="text-3xl font-bold mb-4">{{ producto.nombre }}</h1>
         <p class="text-xl font-semibold mb-4">{{ producto.precioBase }}€</p>
-        <div class="prose max-w-none mb-6">{{ producto.descripcion }}</div>
+        
+        <!-- Descripción detallada -->
+        <div class="prose max-w-none mb-6">
+          <h2 class="text-2xl font-semibold mb-2">Descripción</h2>
+          <p>{{ producto.descripcionDetallada }}</p>
+        </div>
+
+        <!-- Características -->
+        <div class="mb-6">
+          <h2 class="text-2xl font-semibold mb-2">Características</h2>
+          <ul class="list-disc list-inside">
+            <li v-for="(caracteristica, index) in producto.caracteristicas" :key="index">
+              {{ caracteristica }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contenido -->
+        <div class="mb-6">
+          <h2 class="text-2xl font-semibold mb-2">Contenido</h2>
+          <ul class="list-disc list-inside">
+            <li v-for="(item, index) in producto.contenido" :key="index">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Opciones adicionales -->
         <div v-if="producto.opciones && producto.opciones.length > 0" class="mb-6">
-          <h3 class="text-lg font-semibold mb-2">Opciones adicionales:</h3>
-          <ul>
+          <h2 class="text-2xl font-semibold mb-2">Opciones adicionales</h2>
+          <ul class="list-disc list-inside">
             <li v-for="opcion in producto.opciones" :key="opcion.id">
               {{ opcion.nombre }} - {{ opcion.precio }}€
             </li>
           </ul>
         </div>
+
         <button 
           @click="comprarProducto" 
-          class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors"
+          class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors mb-8"
         >
           Comprar ahora
         </button>
       </div>
+    </div>
+
+    <!-- Nueva sección de información extra (fuera de las columnas) -->
+    <div v-if="infoExtra" class="mt-8 prose max-w-none">
+      <h2 class="text-2xl font-semibold mb-4">{{ infoExtra.queEs }}</h2>
+      <p>{{ infoExtra.descripcionGeneral }}</p>
+      
+      <h3 class="text-xl font-semibold mt-6 mb-3">Cómo hacer tu propia tarta de pañales {{ infoExtra.nombre }}</h3>
+      <p>{{ infoExtra.comoHacer.introduccion }}</p>
+      
+      <h4 class="text-lg font-semibold mt-4 mb-2">Materiales necesarios:</h4>
+      <ul v-if="infoExtra.comoHacer.materiales" class="list-disc list-inside mb-4">
+        <li v-for="(material, index) in infoExtra.comoHacer.materiales" :key="index" class="mb-2">
+          {{ material }}
+        </li>
+      </ul>
+      
+      <h4 class="text-lg font-semibold mt-4 mb-2">Pasos a seguir:</h4>
+      <ol class="list-decimal list-inside mb-4">
+        <li v-for="(paso, index) in infoExtra.comoHacer.pasos" :key="index" class="mb-2">
+          {{ paso }}
+        </li>
+      </ol>
+      
+      <div v-if="infoExtra.porQueRegalar">
+        <h3 class="text-xl font-semibold mt-6 mb-3">¿Por qué regalar una tarta de pañales {{ infoExtra.nombre }}?</h3>
+        <p>{{ infoExtra.porQueRegalar }}</p>
+      </div>
+      
+      <div v-if="infoExtra.ventajas">
+        <h3 class="text-xl font-semibold mt-6 mb-3">Ventajas</h3>
+        <ul class="list-disc list-inside mb-4">
+          <li v-for="(ventaja, index) in infoExtra.ventajas" :key="index" class="mb-2">
+            {{ ventaja }}
+          </li>
+        </ul>
+      </div>
+      
+      <div v-if="infoExtra.ideasAdicionales">
+        <h3 class="text-xl font-semibold mt-6 mb-3">Ideas adicionales</h3>
+        <ul class="list-disc list-inside mb-4">
+          <li v-for="(idea, index) in infoExtra.ideasAdicionales" :key="index" class="mb-2">
+            {{ idea }}
+          </li>
+        </ul>
+      </div>
+      
+      <p class="mb-4">{{ infoExtra.conclusion }}</p>
+      <p class="italic">{{ infoExtra.notaFinal }}</p>
     </div>
   </div>
   <div v-else class="container mx-auto px-4 py-8 text-center">
@@ -73,9 +150,10 @@
 </template>
 
 <script>
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted, watch, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { gruposDeProductos } from '@/data/productos.js';
+import { infoExtraProductos } from '@/data/infoextra.js';
 
 export default {
   name: 'DetallesProducto',
@@ -84,6 +162,12 @@ export default {
     const router = useRouter();
     const producto = ref(null);
     const imagenPrincipal = ref('');
+    const infoExtra = computed(() => {
+      if (producto.value) {
+        return infoExtraProductos.find(info => info.id === producto.value.id);
+      }
+      return null;
+    });
 
     const cargarProducto = () => {
       const productoId = parseInt(route.params.id);
@@ -120,7 +204,8 @@ export default {
       producto,
       imagenPrincipal,
       comprarProducto,
-      volverAProductos
+      volverAProductos,
+      infoExtra
     };
   }
 }
