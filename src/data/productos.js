@@ -12,15 +12,17 @@ export const gruposDeProductos = [
         descripcionDetallada: "Nuestro pastel de pañales 'Caramelo' es una deliciosa sorpresa visual que encantará a padres y bebés por igual. Diseñado con esmero para parecer un caramelo gigante, este regalo único combina practicidad y diversión en un solo paquete.",
         caracteristicas: [
           "Diseño único en forma de caramelo gigante",
+          "20 pañales de alta calidad (tamaño a elegir)",
+          "Par de calcetines para bebé incluidos",
           "Decorado con cintas y accesorios coloridos",
           "Perfecto como centro de mesa para baby showers",
           "Combina utilidad y estética en un solo regalo"
         ],
         contenido: [
-          "30-40 pañales de alta calidad (tamaño a elegir)",
+          "20 pañales de alta calidad (tamaño a elegir)",
+          "1 par de calcetines para bebé",
           "Envoltorio de tul en colores vibrantes",
-          "Cintas decorativas",
-          "2-3 juguetes o accesorios para bebé"
+          "Cintas decorativas"
         ]
       },
       {
@@ -33,18 +35,14 @@ export const gruposDeProductos = [
         descripcionDetallada: "Nuestra Moto de Pañales es el regalo perfecto para los padres que sueñan con un futuro piloto en la familia. Este diseño único combina la practicidad de los pañales con la diversión de una moto, creando un regalo que es tanto útil como visualmente impactante. Ideal para baby showers o como regalo de bienvenida, esta moto de pañales seguramente arrancará sonrisas y emoción.",
         caracteristicas: [
           "Diseño único en forma de moto",
-          "40 pañales de talla 1, perfectos para recién nacidos",
-          "Body incluido para vestir al bebé con estilo",
+          "26 pañales de talla 1, perfectos para recién nacidos",
           "Peluche decorativo para añadir un toque tierno",
-          "Pack de toallitas para el cuidado de la piel delicada del bebé",
           "Nombre personalizado para hacer el regalo aún más especial",
           "Ideal como centro de atención en baby showers o como regalo de nacimiento"
         ],
         contenido: [
-          "40 pañales de talla 1",
-          "1 Body para recién nacido",
+          "26 pañales de talla 1",
           "1 Peluche decorativo similar al de las imágenes",
-          "1 Pack de toallitas húmedas para pieles delicadas",
           "Nombre personalizado en la moto de pañales",
           "Materiales y decoración para la estructura de la moto"
         ]
@@ -59,16 +57,14 @@ export const gruposDeProductos = [
         descripcionDetallada: "Nuestra tarta de pañales en forma de batería es el regalo perfecto para los padres más marchosos. Este diseño único combina la practicidad de los pañales con la diversión de un set de batería, creando un regalo que es tanto útil como visualmente impactante. Ideal para baby showers o como regalo de bienvenida, esta batería de pañales seguramente hará que el nuevo bebé sea la estrella del rock en la familia.",
         caracteristicas: [
           "Diseño único en forma de batería",
-          "30 pañales Dodot de talla 1, perfectos para recién nacidos",
-          "Babero o par de calcetines incluidos para el cuidado del bebé",
+          "26 pañales de talla 1, perfectos para recién nacidos",
           "Peluche decorativo para añadir un toque tierno",
           "Nombre personalizado para hacer el regalo aún más especial",
           "Ideal como centro de atención en baby showers o como regalo de nacimiento",
           "Perfecto para padres amantes de la música o futuros rockeros"
         ],
         contenido: [
-          "30 pañales Dodot de talla 1",
-          "1 Babero o par de calcetines",
+          "26 pañales de talla 1",
           "1 Peluche decorativo similar al de las imágenes",
           "Nombre personalizado en la tarta de pañales",
           "Materiales y decoración para la estructura de la batería"
@@ -92,17 +88,17 @@ export const gruposDeProductos = [
         ],
         descripcionDetallada: "Nuestra tarta de pañales de 2 pisos es un regalo práctico y encantador, perfecto para dar la bienvenida a un recién nacido. Combina utilidad y estética en un diseño compacto y atractivo, ideal para aquellos que buscan un regalo más pequeño pero igualmente especial.",
         caracteristicas: [
-          "24 pañales Dodot de talla 1, perfectos para recién nacidos",
-          "Babero o par de calcetines incluidos",
+          "24 pañales de talla 1, perfectos para recién nacidos",
           "Peluche decorativo",
+          "Calcetines o babero incluidos",
           "Nombre personalizado en la tarta",
           "Diseño de 2 pisos compacto y atractivo",
           "Ideal como regalo para baby showers o nacimientos"
         ],
         contenido: [
-          "24 pañales Dodot de talla 1",
-          "1 Babero o par de calcetines",
+          "24 pañales de talla 1",
           "1 Peluche decorativo",
+          "1 par de calcetines o 1 babero (según disponibilidad)",
           "Nombre personalizado en la tarta",
           "Decoración y materiales para la estructura de 2 pisos"
         ]
@@ -120,17 +116,17 @@ export const gruposDeProductos = [
         ],
         descripcionDetallada: "Nuestro pastel de pañales de 3 pisos es un regalo práctico y encantador para dar la bienvenida al nuevo bebé. Combina utilidad con estética, ofreciendo una presentación hermosa que incluye pañales de alta calidad y accesorios esenciales para el recién nacido.",
         caracteristicas: [
-          "32 pañales Dodot de talla 1, perfectos para recién nacidos",
-          "Babero o par de calcetines incluidos",
+          "34 pañales de talla 1, perfectos para recién nacidos",
           "Peluche decorativo",
+          "Calcetines o babero incluidos",
           "Nombre personalizado en la tarta",
           "Diseño de 3 pisos visualmente atractivo",
           "Ideal como regalo para baby showers o nacimientos"
         ],
         contenido: [
-          "32 pañales Dodot de talla 1",
-          "1 Babero o par de calcetines",
+          "34 pañales de talla 1",
           "1 Peluche decorativo",
+          "1 par de calcetines o 1 babero (según disponibilidad)",
           "Nombre personalizado en la tarta",
           "Decoración y materiales para la estructura de 3 pisos"
         ]
@@ -153,15 +149,13 @@ export const gruposDeProductos = [
         descripcionDetallada: "Nuestro 'Castillo mediano' es una creación mágica que transformará cualquier baby shower en un cuento de hadas. Con su base redonda y su diseño encantador, este castillo de pañales es el regalo perfecto para dar la bienvenida al nuevo príncipe o princesa. Combina practicidad con un toque de fantasía, ofreciendo tanto pañales esenciales como accesorios adorables.",
         caracteristicas: [
           "Diseño único de castillo con base redonda",
-          "40 pañales Dodot de talla 1, ideales para recién nacidos",
-          "Incluye un body, prenda esencial para el bebé",
+          "38 pañales de talla 1, ideales para recién nacidos",
           "Peluche decorativo incluido",
           "Nombre personalizado en el castillo",
           "Perfecto como centro de mesa para baby showers o como regalo de bienvenida"
         ],
         contenido: [
-          "40 pañales Dodot de talla 1",
-          "1 Body para recién nacido",
+          "38 pañales de talla 1",
           "1 Peluche decorativo similar al de las imágenes",
           "Nombre personalizado del bebé en el castillo",
           "Materiales y decoración para la estructura del castillo"
@@ -180,18 +174,12 @@ export const gruposDeProductos = [
         descripcionDetallada: "Nuestro 'Castillo grande' es una impresionante creación que hará las delicias de cualquier baby shower o celebración de bienvenida al bebé. Con su base rectangular y su majestuoso diseño, este castillo de pañales es el regalo perfecto para los nuevos padres, combinando practicidad y fantasía en un solo paquete.",
         caracteristicas: [
           "Diseño imponente de castillo con base rectangular",
-          "48 pañales Dodot de talla 1, ideales para recién nacidos",
-          "Incluye un body, prenda esencial para el bebé",
-          "Juego de calcetines para mantener los pies del bebé calientes",
-          "Pack de toallitas incluido para el cuidado de la piel del bebé",
+          "48 pañales de talla 1, ideales para recién nacidos",
           "Peluche decorativo como toque final encantador",
           "Perfecto como pieza central para baby showers o como regalo de bienvenida"
         ],
         contenido: [
-          "48 pañales Dodot de talla 1",
-          "1 Body para recién nacido",
-          "1 Juego de calcetines",
-          "1 Pack de toallitas húmedas",
+          "48 pañales de talla 1",
           "1 Peluche decorativo similar al de las imágenes",
           "Materiales y decoración para la estructura del castillo grande"
         ]
@@ -211,20 +199,16 @@ export const gruposDeProductos = [
         descripcionDetallada: "Nuestro Carrito de Pañales es una creación encantadora que combina practicidad y estilo en un solo regalo. Diseñado para parecer un auténtico carrito de bebé, este conjunto no solo es visualmente atractivo, sino que también está lleno de elementos esenciales para el cuidado del recién nacido. Es el regalo perfecto para dar la bienvenida al nuevo miembro de la familia con un toque de originalidad y ternura.",
         caracteristicas: [
           "Diseño único en forma de carrito de bebé",
-          "48 pañales Dodot de talla 1, ideales para recién nacidos",
-          "Body incluido para vestir al bebé con estilo",
-          "Babero o par de calcetines para el cuidado y confort del bebé",
+          "54 pañales de talla 1, ideales para recién nacidos",
+          "Incluye 3 productos esenciales para el cuidado del bebé",
           "Peluche decorativo para añadir un toque tierno",
-          "Pack de toallitas para el cuidado de la piel delicada del bebé",
           "Nombre personalizado para hacer el regalo aún más especial",
           "Perfecto como centro de atención en baby showers o como regalo de bienvenida"
         ],
         contenido: [
-          "48 pañales Dodot de talla 1",
-          "1 Body para recién nacido",
-          "1 Babero o par de calcetines",
+          "54 pañales de talla 1",
+          "3 productos para el cuidado del bebé",
           "1 Peluche decorativo similar al de las imágenes",
-          "1 Pack de toallitas húmedas para pieles delicadas",
           "Nombre personalizado en el carrito de pañales",
           "Materiales y decoración para la estructura del carrito"
         ]
@@ -239,15 +223,15 @@ export const gruposDeProductos = [
         descripcionDetallada: "Nuestro Coche de Pañales es un regalo encantador y práctico para los nuevos padres. Con su diseño ingenioso que simula un coche de bebé, este conjunto no solo es visualmente atractivo, sino que también está repleto de elementos esenciales para el cuidado del recién nacido. Es el regalo perfecto para dar la bienvenida al nuevo miembro de la familia con estilo y utilidad.",
         caracteristicas: [
           "Diseño único en forma de coche de bebé",
-          "Pañales de talla 1, ideales para recién nacidos",
-          "Incluye accesorios esenciales para el cuidado del bebé",
+          "35 pañales de talla 1, ideales para recién nacidos",
+          "Incluye un babero para el cuidado del bebé",
           "Peluche decorativo incluido",
           "Nombre personalizado para hacer el regalo aún más especial",
           "Perfecto como centro de atención en baby showers o como regalo de bienvenida"
         ],
         contenido: [
-          "Pañales de talla 1",
-          "Accesorios para el cuidado del bebé",
+          "35 pañales de talla 1",
+          "1 Babero",
           "1 Peluche decorativo",
           "Nombre personalizado en el coche de pañales",
           "Materiales y decoración para la estructura del coche"
@@ -263,17 +247,17 @@ export const gruposDeProductos = [
         descripcionDetallada: "Descubre nuestra tarta guitarra hecha con pañales: un regalo único y creativo para los padres amantes de la música. Esta tarta de pañales en forma de guitarra no solo es visualmente impresionante, sino también práctica, combinando la diversión de un instrumento musical con la utilidad de los pañales para el recién nacido.",
         caracteristicas: [
           "Diseño único en forma de guitarra",
-          "40 pañales Dodot de talla 1, ideales para recién nacidos",
+          "45 pañales de talla 1, ideales para recién nacidos",
           "Peluche decorativo incluido",
           "Nombre personalizado en la tarta",
           "Perfecto para padres músicos o amantes de la música",
           "Combina funcionalidad con un diseño creativo y divertido"
         ],
         contenido: [
-          "40 pañales Dodot de talla 1",
-          "1 Peluche decorativo de tamaño similar al de las imágenes",
-          "Nombre personalizado del bebé en la tarta",
-          "Materiales y decoración para la estructura en forma de guitarra"
+          "45 pañales de talla 1",
+          "1 Peluche decorativo",
+          "Nombre personalizado en la tarta de pañales",
+          "Materiales y decoración para la estructura de la guitarra"
         ]
       },
       {
@@ -286,18 +270,16 @@ export const gruposDeProductos = [
         descripcionDetallada: "Nuestra Raqueta de Pádel de Pañales es el regalo perfecto para los padres aficionados al deporte. Este diseño creativo combina la practicidad de los pañales con la forma divertida de una raqueta de pádel, creando un regalo único que es tanto útil como visualmente impactante. Ideal para baby showers o como regalo de bienvenida, esta raqueta de pañales seguramente será un éxito entre los padres deportistas.",
         caracteristicas: [
           "Diseño único en forma de raqueta de pádel",
-          "Pañales de talla 1, perfectos para recién nacidos",
-          "Incluye accesorios esenciales para el cuidado del bebé",
-          "Peluche decorativo para añadir un toque tierno",
-          "Nombre personalizado para hacer el regalo aún más especial",
-          "Ideal como centro de atención en baby showers o como regalo de nacimiento",
-          "Perfecto para padres amantes del deporte o futuros deportistas"
+          "45 pañales de talla 1, ideales para recién nacidos",
+          "Peluche decorativo incluido",
+          "Nombre personalizado en la tarta",
+          "Perfecto para padres aficionados al pádel o deportistas",
+          "Combina funcionalidad con un diseño creativo y deportivo"
         ],
         contenido: [
-          "Pañales de talla 1",
-          "Accesorios para el cuidado del bebé",
+          "45 pañales de talla 1",
           "1 Peluche decorativo",
-          "Nombre personalizado en la raqueta de pañales",
+          "Nombre personalizado en la tarta de pañales",
           "Materiales y decoración para la estructura de la raqueta"
         ]
       },
@@ -313,20 +295,19 @@ export const gruposDeProductos = [
         ],
         descripcionDetallada: "Nuestra tarta de pañales de Artes Marciales es el regalo perfecto para los padres aficionados a los deportes de combate. Este diseño creativo combina la practicidad de los pañales con un tema de artes marciales, creando un regalo único que es tanto útil como visualmente impactante. Ideal para baby showers o como regalo de bienvenida, esta tarta de pañales seguramente inspirará al futuro campeón de la familia.",
         caracteristicas: [
-          "Diseño único inspirado en las artes marciales",
-          "Pañales de talla 1, perfectos para recién nacidos",
-          "Incluye accesorios esenciales para el cuidado del bebé",
-          "Peluche decorativo para añadir un toque tierno",
-          "Nombre personalizado para hacer el regalo aún más especial",
-          "Ideal como centro de atención en baby showers o como regalo de nacimiento",
-          "Perfecto para padres aficionados a las artes marciales o futuros competidores"
+          "Diseño temático de artes marciales",
+          "45 pañales de talla 1, ideales para recién nacidos",
+          "Incluye 2 detalles relacionados con las artes marciales",
+          "Peluche decorativo incluido",
+          "Nombre personalizado en la tarta",
+          "Perfecto para padres aficionados a las artes marciales o deportes de combate"
         ],
         contenido: [
-          "Pañales de talla 1",
-          "Accesorios para el cuidado del bebé",
+          "45 pañales de talla 1",
+          "2 detalles relacionados con las artes marciales",
           "1 Peluche decorativo",
           "Nombre personalizado en la tarta de pañales",
-          "Materiales y decoración para la estructura temática de artes marciales"
+          "Materiales y decoración para la estructura temática"
         ]
       }
     ]
