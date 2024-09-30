@@ -17,7 +17,7 @@
               
               <template v-if="section.razones">
                 <ul v-if="Array.isArray(section.razones)" class="list-disc pl-5 mb-4">
-                  <li v-for="(razon, index) in section.razones" :key="index" class="mb-2" v-html="formatMarkdown(razon)"></li>
+                  <li v-for="(razon, index) in section.razones" :key="index" class="mb-2" v-html="formatMarkdown(razon.contenido)"></li>
                 </ul>
                 <template v-else>
                   <div v-for="(razon, razonKey) in section.razones" :key="razonKey" class="mb-4">
@@ -54,6 +54,7 @@
 <script>
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { useStore } from 'vuex'; // Importa useStore
 import { gruposDeBlogs } from '@/data/blogdata.js';
 import { marked } from 'marked';
 
@@ -63,10 +64,16 @@ export default {
     const post = ref(null);
     const route = useRoute();
     const router = useRouter();
+    const store = useStore(); // Usa el store
 
     onMounted(() => {
+      // Asegúrate de que los datos estén en el store
+      if (store.state.gruposDeBlogs.length === 0) {
+        store.dispatch('fetchGruposDeBlogs'); // Carga los blogs si no están en el store
+      }
+
       const postId = parseInt(route.params.id);
-      const curiosidades = gruposDeBlogs.find(grupo => grupo.nombre === 'Curiosidades');
+      const curiosidades = store.state.gruposDeBlogs.find(grupo => grupo.nombre === 'Curiosidades');
       post.value = curiosidades.posts.find(p => p.id === postId);
       if (!post.value) {
         router.push({ name: 'Blog' });

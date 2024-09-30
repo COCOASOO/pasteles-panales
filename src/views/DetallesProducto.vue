@@ -152,26 +152,27 @@
 <script>
 import { ref, onMounted, watch, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { gruposDeProductos } from '@/data/productos.js';
-import { infoExtraProductos } from '@/data/infoextra.js';
+import { useStore } from 'vuex'; // Importa useStore
 
 export default {
   name: 'DetallesProducto',
   setup() {
     const route = useRoute();
     const router = useRouter();
+    const store = useStore(); // Usa el store
     const producto = ref(null);
     const imagenPrincipal = ref('');
+
     const infoExtra = computed(() => {
       if (producto.value) {
-        return infoExtraProductos.find(info => info.id === producto.value.id);
+        return store.state.infoExtraProductos?.find(info => info.id === producto.value.id) || null;
       }
       return null;
     });
 
     const cargarProducto = () => {
       const productoId = parseInt(route.params.id);
-      producto.value = gruposDeProductos
+      producto.value = store.state.gruposDeProductos
         .flatMap(grupo => grupo.productos)
         .find(p => p.id === productoId);
 
@@ -182,9 +183,13 @@ export default {
       }
     };
 
-    onMounted(cargarProducto);
+    onMounted(() => {
+      if (store.state.gruposDeProductos.length === 0) {
+        store.dispatch('fetchGruposDeProductos'); // Carga los productos si no están en el store
+      }
+      cargarProducto();
+    });
 
-    // Observar cambios en la ruta para recargar el producto si cambia el ID
     watch(() => route.params.id, cargarProducto);
 
     const comprarProducto = () => {
