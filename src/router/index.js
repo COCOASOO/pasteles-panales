@@ -48,7 +48,7 @@ const routes = [
     component: Contacto
   },
   {
-    path: '/producto/:id',
+    path: '/productos/:id',  // Cambiado de '/producto/:id' a '/productos/:id'
     name: 'DetallesProducto',
     component: DetallesProducto
   },
