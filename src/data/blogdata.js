@@ -117,7 +117,7 @@ export const gruposDeBlogs = [
         id: 1,
         titulo: '¿Por qué es buena idea regalar pañales?',
         fecha: '02/02/2024',
-        autor: 'admin',
+        autor: 'Manoli',
         extracto: 'Regalar pañales es una idea muy popular y creativa a la hora de celebrar la llegada de una nueva criatura. Existen un sinfín de razones por las cuales regalar un pastel de pañales es una muy buena cosa para hacer.',
         contenido: {
           introduccion: `Regalar pañales es una idea muy popular y creativa a la hora de celebrar la llegada de una nueva criatura. Existen un sinfín de razones por las cuales regalar un pastel de pañales es una muy buena cosa para hacer.

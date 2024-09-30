@@ -70,16 +70,13 @@
         </div>
       </template>
     </div>
-
-    <!-- Modal para mostrar detalles -->
-    <!-- Eliminamos el componente DetallesProductoModal -->
   </div>
 </template>
 
 <script>
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
-import { gruposDeProductos } from '@/data/productos.js';
+import { useStore } from 'vuex'; // Importa useStore
 import ProductoCard from './ProductoCard.vue';
 
 export default {
@@ -89,24 +86,30 @@ export default {
   },
   setup() {
     const router = useRouter();
+    const store = useStore(); // Usa el store
     const precioMaximo = ref(60);
     const ordenSeleccionado = ref('');
 
+    // Cargar productos desde el store
+    if (store.state.gruposDeProductos.length === 0) {
+      store.dispatch('fetchGruposDeProductos'); // Carga los productos si no están en el store
+    }
+
     const precioMaximoDisponible = computed(() => {
-      return Math.max(...gruposDeProductos.flatMap(grupo => 
+      return Math.max(...store.state.gruposDeProductos.flatMap(grupo => 
         grupo.productos.map(producto => producto.precioBase)
       ));
     });
 
     const gruposFiltrados = computed(() => {
-      return gruposDeProductos.map(grupo => ({
+      return store.state.gruposDeProductos.map(grupo => ({
         ...grupo,
         productos: grupo.productos.filter(producto => producto.precioBase <= precioMaximo.value)
       })).filter(grupo => grupo.productos.length > 0);
     });
 
     const productosFiltrados = computed(() => {
-      let productos = gruposDeProductos.flatMap(grupo => grupo.productos)
+      let productos = store.state.gruposDeProductos.flatMap(grupo => grupo.productos)
         .filter(producto => producto.precioBase <= precioMaximo.value);
 
       if (ordenSeleccionado.value) {
