@@ -198,7 +198,7 @@
 
         const message = this.generateMessage();
         const encodedMessage = encodeURIComponent(message);
-        const phoneNumber = '34664377198';
+        const phoneNumber = '34678846424';
         
         if (this.isMobile()) {
           // En móvil, abre directamente la app de WhatsApp
@@ -225,7 +225,7 @@
       whatsappLink() {
         const message = this.generateMessage();
         const encodedMessage = encodeURIComponent(message);
-        const phoneNumber = '34664377198';
+        const phoneNumber = '34678846424';
         
         return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
       },
