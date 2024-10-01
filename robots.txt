@@ -1,0 +1,12 @@
+# robots.txt para pastelesdepanaes.es
+
+User-agent: *
+Disallow: /src/          # No indexar la carpeta de código fuente
+Disallow: /node_modules/ # No indexar la carpeta de dependencias
+Disallow: /dist/         # No indexar la carpeta de distribución
+Disallow: /assets/       # No indexar la carpeta de activos
+
+# Permitir el acceso a todo lo demás
+Allow: /
+
+Sitemap: https://pastelesdepanaes.es/sitemap.xml
