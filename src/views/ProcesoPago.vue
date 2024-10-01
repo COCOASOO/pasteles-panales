@@ -96,7 +96,7 @@
     </div>
     <!-- Importe total y botón de enviar pedido -->
     <div class="bg-white p-6 mb-8">
-      <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-4">
         <div class="mb-4 md:mb-0 text-center md:text-left w-full md:w-auto">
           <h2 class="text-2xl font-semibold mb-2">Importe total:</h2>
           <p class="text-3xl font-bold">{{ importeTotal }}€</p>
@@ -104,15 +104,17 @@
             * El importe del peluche se añadirá al total del pedido.
           </p>
         </div>
-        <!-- Botón para copiar el mensaje -->
-        <button @click="copiarMensajeAlPortapapeles" 
-          class="bg-blue-200 text-blue-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-300 transition duration-300 w-full md:w-auto mr-2">
-          Copiar mensaje para WhatsApp
-        </button>
-        <button @click="handleWhatsAppClick"
-          class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300 w-full md:w-auto">
-          Enviar pedido por WhatsApp
-        </button>
+        <div class="flex flex-col md:flex-row md:items-center">
+          <!-- Botón para copiar el mensaje -->
+          <button @click="copiarMensajeAlPortapapeles" 
+            class="bg-blue-200 text-blue-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-300 transition duration-300 w-full md:w-auto mb-2 md:mb-0 md:mr-2">
+            Copiar mensaje para WhatsApp
+          </button>
+          <button @click="handleWhatsAppClick"
+            class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300 w-full md:w-auto">
+            Enviar pedido por WhatsApp
+          </button>
+        </div>
       </div>
       <p class="text-sm text-gray-600 mt-2">
         El mensaje que se copiará es el que se debe enviar por WhatsApp para hacer el pedido.
@@ -236,7 +238,7 @@ export default {
 
       const message = this.generateMessage();
       const encodedMessage = encodeURIComponent(message).replace(/%0A/g, '%0D%0A');
-      const phoneNumber = '34664377198';  // El número de WhatsApp
+      const phoneNumber = '34678846424';  // El número de WhatsApp
 
       // Crear enlace universal de WhatsApp
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
