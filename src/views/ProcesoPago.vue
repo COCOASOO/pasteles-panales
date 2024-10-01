@@ -200,6 +200,7 @@
         const encodedMessage = encodeURIComponent(message);
         const phoneNumber = '34678846424';
         
+        // Cambiar la forma de abrir WhatsApp en móvil
         if (this.isMobile()) {
           // En móvil, abre directamente la app de WhatsApp
           window.location.href = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
@@ -209,10 +210,8 @@
           const newWindow = window.open(webWhatsAppUrl, '_blank');
           
           if (newWindow) {
-            // Si la ventana se abrió, asumimos que WhatsApp Web se está cargando
             newWindow.focus();
           } else {
-            // Si la ventana no se abrió, mostramos la alerta
             alert('No se pudo abrir WhatsApp Web. Por favor, asegúrate de que las ventanas emergentes están permitidas o utiliza las alternativas de contacto proporcionadas.');
           }
         }
