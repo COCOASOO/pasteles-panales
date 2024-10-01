@@ -1,5 +1,5 @@
 <template>
-  <div class="hero min-h-screen bg-base-200" style="background-image: url('banner.png'); background-size: cover; background-position: center;">
+  <div class="hero min-h-screen bg-base-200" style="background-image: url('banner.webp'); background-size: cover; background-position: center;">
     <div class="hero-content text-center">
       <div class="max-w-md md:max-w-2xl lg:max-w-4xl">
         <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold font-baby">Bienvenido a Nuestro Mundo de Pasteles de Pañales</h1>

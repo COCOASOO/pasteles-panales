@@ -7,7 +7,7 @@ export const gruposDeProductos = [
         nombre: 'Caramelo',
         descripcion: "Dulce sorpresa visual que combina practicidad y diversión: un pastel de pañales en forma de caramelo gigante, decorado con cintas y accesorios coloridos.",
         precioBase: 18,
-        imagenes: ['/caramelo.jpg', '/caramelo2.jpg'],
+        imagenes: ['/caramelo.webp', '/caramelo2.webp'],
         orientacionImagen: 'horizontal',
         descripcionDetallada: "Nuestro pastel de pañales 'Caramelo' es una deliciosa sorpresa visual que encantará a padres y bebés por igual. Diseñado con esmero para parecer un caramelo gigante, este regalo único combina practicidad y diversión en un solo paquete.",
         caracteristicas: [
@@ -30,7 +30,7 @@ export const gruposDeProductos = [
         nombre: 'Moto',
         descripcion: 'Regalo perfecto para futuros pilotos: una moto de pañales que combina practicidad y diversión, ideal para baby showers o como regalo de bienvenida.',
         precioBase: 30,
-        imagenes: ['/moto.jpg'],
+        imagenes: ['/moto.webp'],
         orientacionImagen: 'horizontal',
         descripcionDetallada: "Nuestra Moto de Pañales es el regalo perfecto para los padres que sueñan con un futuro piloto en la familia. Este diseño único combina la practicidad de los pañales con la diversión de una moto, creando un regalo que es tanto útil como visualmente impactante. Ideal para baby showers o como regalo de bienvenida, esta moto de pañales seguramente arrancará sonrisas y emoción.",
         caracteristicas: [
@@ -52,7 +52,7 @@ export const gruposDeProductos = [
         nombre: 'Batería',
         descripcion: 'Para los padres más marchosos: una tarta de pañales en forma de batería, combinando utilidad con diversión musical.',
         precioBase: 30,
-        imagenes: ['/bateria.jpg','/bateria2.jpg'],
+        imagenes: ['/bateria.webp','/bateria2.webp'],
         orientacionImagen: 'horizontal',
         descripcionDetallada: "Nuestra tarta de pañales en forma de batería es el regalo perfecto para los padres más marchosos. Este diseño único combina la practicidad de los pañales con la diversión de un set de batería, creando un regalo que es tanto útil como visualmente impactante. Ideal para baby showers o como regalo de bienvenida, esta batería de pañales seguramente hará que el nuevo bebé sea la estrella del rock en la familia.",
         caracteristicas: [
@@ -80,7 +80,7 @@ export const gruposDeProductos = [
         nombre: 'Pastel de 2 pisos',
         descripcion: 'Tarta de pañales compacta y encantadora, perfecta para dar la bienvenida a un recién nacido con estilo y practicidad.',
         precioBase: 25,
-        imagenes: ['/2pisos2.jpg','/2pisos1.jpg','/2pisos3.jpg'],
+        imagenes: ['/2pisos2.webp','/2pisos1.webp','/2pisos3.webp'],
         orientacionImagen: 'vertical',
         opciones: [
           { id: 1, nombre: 'Agregar 2 detalles', precio: 5 },
@@ -108,7 +108,7 @@ export const gruposDeProductos = [
         nombre: 'Pastel de 3 pisos',
         descripcion: 'Regalo práctico y encantador que combina utilidad y estética en un diseño de tres pisos, ideal para baby showers o nacimientos.',
         precioBase: 30,
-        imagenes: ['/3pisos1.jpg','/3pisos2.jpg','/3pisos3.jpg','/3pisos4.jpg'],
+        imagenes: ['/3pisos1.webp','/3pisos2.webp','/3pisos3.webp','/3pisos4.webp'],
         orientacionImagen: 'vertical',
         opciones: [
           { id: 3, nombre: 'Agregar 2 detalles', precio: 5 },
@@ -141,7 +141,7 @@ export const gruposDeProductos = [
         nombre: 'Castillo mediano',
         descripcion: 'Creación mágica que transforma cualquier baby shower en un cuento de hadas, con base redonda y diseño encantador.',
         precioBase: 35,
-        imagenes: ['/castillomediano.jpg','/castillomediano2.jpg','/castillomediano3.jpg'],
+        imagenes: ['/castillomediano.webp','/castillomediano2.webp','/castillomediano3.webp'],
         orientacionImagen: 'horizontal',
         opciones: [
           { id: 5, nombre: 'Agregar 2 detalles', precio: 5 },
@@ -166,7 +166,7 @@ export const gruposDeProductos = [
         nombre: 'Castillo grande',
         descripcion: 'Impresionante castillo de pañales con base rectangular, perfecto para dar la bienvenida al nuevo príncipe o princesa con estilo.',
         precioBase: 45,
-        imagenes: ['/castillogrande.jpg','/castillogrande2.jpg'],
+        imagenes: ['/castillogrande.webp','/castillogrande2.webp'],
         orientacionImagen: 'horizontal',
         opciones: [
           { id: 6, nombre: 'Agregar 2 detalles', precio: 5 }
@@ -194,7 +194,7 @@ export const gruposDeProductos = [
         nombre: 'Carrito de bebé',
         descripcion: 'Encantador carrito de pañales que combina practicidad y estilo, lleno de elementos esenciales para el cuidado del recién nacido.',
         precioBase: 50,
-        imagenes: ['/carro.jpg','/carrito2.jpg','/carrito3.jpg'],
+        imagenes: ['/carro.webp','/carrito2.webp','/carrito3.webp'],
         orientacionImagen: 'horizontal',
         descripcionDetallada: "Nuestro Carrito de Pañales es una creación encantadora que combina practicidad y estilo en un solo regalo. Diseñado para parecer un auténtico carrito de bebé, este conjunto no solo es visualmente atractivo, sino que también está lleno de elementos esenciales para el cuidado del recién nacido. Es el regalo perfecto para dar la bienvenida al nuevo miembro de la familia con un toque de originalidad y ternura.",
         caracteristicas: [
@@ -218,7 +218,7 @@ export const gruposDeProductos = [
         nombre: 'Coche',
         descripcion: 'Regalo práctico y atractivo que simula un coche de bebé, repleto de elementos esenciales para el cuidado del recién nacido.',
         precioBase: 50,
-        imagenes: ['/coche.jpg','/coche2.jpg'],
+        imagenes: ['/coche.webp','/coche2.webp'],
         orientacionImagen: 'horizontal',
         descripcionDetallada: "Nuestro Coche de Pañales es un regalo encantador y práctico para los nuevos padres. Con su diseño ingenioso que simula un coche de bebé, este conjunto no solo es visualmente atractivo, sino que también está repleto de elementos esenciales para el cuidado del recién nacido. Es el regalo perfecto para dar la bienvenida al nuevo miembro de la familia con estilo y utilidad.",
         caracteristicas: [
@@ -242,7 +242,7 @@ export const gruposDeProductos = [
         nombre: 'Guitarra',
         descripcion: 'Tarta de pañales única en forma de guitarra, perfecta para padres amantes de la música o futuros rockeros.',
         precioBase: 50,
-        imagenes: ['/guitarra.jpg'],
+        imagenes: ['/guitarra.webp'],
         orientacionImagen: 'horizontal',
         descripcionDetallada: "Descubre nuestra tarta guitarra hecha con pañales: un regalo único y creativo para los padres amantes de la música. Esta tarta de pañales en forma de guitarra no solo es visualmente impresionante, sino también práctica, combinando la diversión de un instrumento musical con la utilidad de los pañales para el recién nacido.",
         caracteristicas: [
@@ -265,7 +265,7 @@ export const gruposDeProductos = [
         nombre: 'Raqueta de pádel',
         descripcion: 'Regalo creativo para padres deportistas: una raqueta de pádel hecha de pañales, combinando utilidad y diversión.',
         precioBase: 50,
-        imagenes: ['/raqueta.jpg','/raqueta2.jpg'],
+        imagenes: ['/raqueta.webp','/raqueta2.webp'],
         orientacionImagen: 'horizontal',
         descripcionDetallada: "Nuestra Raqueta de Pádel de Pañales es el regalo perfecto para los padres aficionados al deporte. Este diseño creativo combina la practicidad de los pañales con la forma divertida de una raqueta de pádel, creando un regalo único que es tanto útil como visualmente impactante. Ideal para baby showers o como regalo de bienvenida, esta raqueta de pañales seguramente será un éxito entre los padres deportistas.",
         caracteristicas: [
@@ -288,7 +288,7 @@ export const gruposDeProductos = [
         nombre: 'Artes marciales',
         descripcion: 'Tarta de pañales temática de artes marciales, ideal para padres aficionados a los deportes de combate o futuros campeones.',
         precioBase: 50,
-        imagenes: ['/ring2.jpg','/ring1.jpg'],
+        imagenes: ['/ring2.webp','/ring1.webp'],
         orientacionImagen: 'horizontal',
         opciones: [
           { id: 7, nombre: 'Agregar 2 detalles', precio: 5 },
@@ -320,7 +320,7 @@ export const gruposDeProductos = [
         nombre: 'Tu idea hecha regalo',
         descripcion: 'Servicio de personalización total: transformamos tu idea en una tarta de pañales única, perfecta para regalos temáticos o con significado especial.',
         precioBase: 60,
-        imagenes: ['/regalo.png'],
+        imagenes: ['/regalo.webp'],
         orientacionImagen: 'horizontal',
         opciones: [
           { id: 8, nombre: 'Agregar 2 detalles', precio: 5 },
