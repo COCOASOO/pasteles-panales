@@ -13,18 +13,30 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    meta: {
+      title: 'Bienvenido a Pasteles de Pañales',
+      description: 'Descubre nuestras creaciones únicas de pasteles de pañales para bebés.'
+    }
   },
   {
     path: '/productos',
     name: 'paginaProductos',
-    component: Productos
+    component: Productos,
+    meta: {
+      title: 'Nuestros Productos',
+      description: 'Explora nuestra variedad de pasteles de pañales y regalos para bebés.'
+    }
   },
   {
     path: '/proceso-pago/:productoId',
     name: 'ProcesoPago',
     component: ProcesoPago,
     props: true,
+    meta: {
+      title: 'Proceso de Pedido',
+      description: 'Sigue los pasos para realizar tu pedido de pasteles de pañales.'
+    },
     beforeEnter: (to, from, next) => {
       if (from.name !== 'paginaProductos' && from.name !== 'DetallesProducto') {
         next({ name: 'home' });
@@ -40,32 +52,56 @@ const routes = [
   {
     path: '/como-lo-hacemos',
     name: 'comoLoHacemos',
-    component: ComoLoHacemos
+    component: ComoLoHacemos,
+    meta: {
+      title: '¿Cómo lo Hacemos?',
+      description: 'Conoce el proceso detrás de nuestros pasteles de pañales.'
+    }
   },
   {
     path: '/contacto',
     name: 'contacto',
-    component: Contacto
+    component: Contacto,
+    meta: {
+      title: 'Contacto',
+      description: 'Ponte en contacto con nosotros para más información sobre nuestros productos.'
+    }
   },
   {
-    path: '/productos/:id',  // Cambiado de '/producto/:id' a '/productos/:id'
+    path: '/productos/:id',
     name: 'DetallesProducto',
-    component: DetallesProducto
+    component: DetallesProducto,
+    meta: {
+      title: 'Detalles del Producto',
+      description: 'Obtén más información sobre el producto seleccionado.'
+    }
   },
   {
     path: '/blog',
     name: 'Blog',
-    component: Blog
+    component: Blog,
+    meta: {
+      title: 'Blog de Pasteles de Pañales',
+      description: 'Explora nuestro blog para obtener ideas y consejos sobre pasteles de pañales.'
+    }
   },
   {
     path: '/blog/:id',
     name: 'BlogPost',
-    component: BlogPost
+    component: BlogPost,
+    meta: {
+      title: 'Artículo del Blog',
+      description: 'Lee nuestro artículo sobre pasteles de pañales y consejos útiles.'
+    }
   },
   {
     path: '/blog/curiosidad/:id',
     name: 'CuriosidadPost',
-    component: CuriosidadPost
+    component: CuriosidadPost,
+    meta: {
+      title: 'Curiosidades sobre Pasteles de Pañales',
+      description: 'Descubre curiosidades y datos interesantes sobre nuestros productos.'
+    }
   },
   {
     path: '/:pathMatch(.*)*',

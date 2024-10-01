@@ -103,13 +103,6 @@
       <h3 class="text-xl font-semibold mt-6 mb-3">Cómo hacer tu propia tarta de pañales {{ infoExtra.nombre }}</h3>
       <p>{{ infoExtra.comoHacer.introduccion }}</p>
       
-      <h4 class="text-lg font-semibold mt-4 mb-2">Materiales necesarios:</h4>
-      <ul v-if="infoExtra.comoHacer.materiales" class="list-disc list-inside mb-4">
-        <li v-for="(material, index) in infoExtra.comoHacer.materiales" :key="index" class="mb-2">
-          {{ material }}
-        </li>
-      </ul>
-      
       <h4 class="text-lg font-semibold mt-4 mb-2">Pasos a seguir:</h4>
       <ol class="list-decimal list-inside mb-4">
         <li v-for="(paso, index) in infoExtra.comoHacer.pasos" :key="index" class="mb-2">
@@ -153,6 +146,7 @@
 import { ref, onMounted, watch, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useStore } from 'vuex'; // Importa useStore
+import { infoExtraProductos } from '@/data/infoextra.js'; // Asegúrate de importar la información extra
 
 export default {
   name: 'DetallesProducto',
@@ -165,7 +159,7 @@ export default {
 
     const infoExtra = computed(() => {
       if (producto.value) {
-        return store.state.infoExtraProductos?.find(info => info.id === producto.value.id) || null;
+        return infoExtraProductos.find(info => info.id === producto.value.id) || null;
       }
       return null;
     });
@@ -215,3 +209,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* Estilos opcionales */
+</style>
