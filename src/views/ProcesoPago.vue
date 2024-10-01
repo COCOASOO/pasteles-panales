@@ -104,11 +104,19 @@
             * El importe del peluche se añadirá al total del pedido.
           </p>
         </div>
+        <!-- Botón para copiar el mensaje -->
+        <button @click="copiarMensajeAlPortapapeles" 
+          class="bg-blue-200 text-blue-800 px-4 py-2 rounded-lg font-semibold hover:bg-blue-300 transition duration-300 w-full md:w-auto mr-2">
+          Copiar mensaje para WhatsApp
+        </button>
         <button @click="handleWhatsAppClick"
           class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300 w-full md:w-auto">
           Enviar pedido por WhatsApp
         </button>
       </div>
+      <p class="text-sm text-gray-600 mt-2">
+        El mensaje que se copiará es el que se debe enviar por WhatsApp para hacer el pedido.
+      </p>
 
       <div class="text-sm text-gray-600 mb-4" v-if="!isMobile()">
         <p>
@@ -162,97 +170,104 @@ export default {
   },
   methods: {
     // Método para buscar el producto seleccionado
-  buscarProducto() {
-    for (const grupo of gruposDeProductos) {
-      const producto = grupo.productos.find(p => p.id.toString() === this.productoId);
-      if (producto) {
-        this.productoSeleccionado = producto;
-        break;
+    buscarProducto() {
+      for (const grupo of gruposDeProductos) {
+        const producto = grupo.productos.find(p => p.id.toString() === this.productoId);
+        if (producto) {
+          this.productoSeleccionado = producto;
+          break;
+        }
       }
-    }
-  },
-  // Método para verificar si es un enlace válido
-  isValidUrl(url) {
-    try {
-      new URL(url);
-      return true;
-    } catch (_) {
-      return false;
-    }
-  },
+    },
+    // Método para verificar si es un enlace válido
+    isValidUrl(url) {
+      try {
+        new URL(url);
+        return true;
+      } catch (_) {
+        return false;
+      }
+    },
     isMobile() {
       // Función mejorada para detectar móviles
       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     },
-   // Generar el mensaje de WhatsApp con la información del pedido
-  generateMessage() {
-    if (!this.productoSeleccionado) return '';
+    // Generar el mensaje de WhatsApp con la información del pedido
+    generateMessage() {
+      if (!this.productoSeleccionado) return '';
 
-    let mensaje = `¡Hola! Vengo de la página web y me gustaría hacer un pedido personalizado.\n\n`;
-    mensaje += `Estoy interesado en el producto: "${this.productoSeleccionado.nombre}" (Precio base: ${this.productoSeleccionado.precioBase}€)\n\n`;
-    mensaje += `Detalles de mi pedido:\n`;
-    mensaje += `- Nombre del bebé: ${this.pedido.nombreBebe}\n`;
-    mensaje += `- Color principal del pastel: ${this.pedido.colorPrincipal === 'otro' ? this.pedido.otroColor : this.pedido.colorPrincipal}\n`;
+      let mensaje = `¡Hola! Vengo de la página web y me gustaría hacer un pedido personalizado.\n\n`;
+      mensaje += `Estoy interesado en el producto: "${this.productoSeleccionado.nombre}" (Precio base: ${this.productoSeleccionado.precioBase}€)\n\n`;
+      mensaje += `Detalles de mi pedido:\n`;
+      mensaje += `- Nombre del bebé: ${this.pedido.nombreBebe}\n`;
+      mensaje += `- Color principal del pastel: ${this.pedido.colorPrincipal === 'otro' ? this.pedido.otroColor : this.pedido.colorPrincipal}\n`;
 
-    const opcionSeleccionada = this.productoSeleccionado.opciones ?
-      this.productoSeleccionado.opciones.find(opcion => opcion.id === this.pedido.opcionSeleccionada) : null;
+      const opcionSeleccionada = this.productoSeleccionado.opciones ?
+        this.productoSeleccionado.opciones.find(opcion => opcion.id === this.pedido.opcionSeleccionada) : null;
 
-    if (opcionSeleccionada) {
-      mensaje += `- Opción adicional seleccionada: ${opcionSeleccionada.nombre} (+${opcionSeleccionada.precio}€)\n`;
-    }
+      if (opcionSeleccionada) {
+        mensaje += `- Opción adicional seleccionada: ${opcionSeleccionada.nombre} (+${opcionSeleccionada.precio}€)\n`;
+      }
 
-    if (this.pedido.peluche && this.isValidUrl(this.pedido.peluche)) {
-      mensaje += `- Peluche específico: Sí (enlace proporcionado)\n`;
-    }
+      if (this.pedido.peluche && this.isValidUrl(this.pedido.peluche)) {
+        mensaje += `- Peluche específico: Sí, enlace: ${this.pedido.peluche}\n`;
+      }
 
-    mensaje += `- Necesita envío: ${this.pedido.necesitaEnvio ? 'Sí' : 'No'}\n`;
+      mensaje += `- Necesita envío: ${this.pedido.necesitaEnvio ? 'Sí' : 'No'}\n`;
 
-    mensaje += `\nImporte total: ${this.importeTotal}€\n`;
-    mensaje += `\n¿Podemos proceder con el pedido? ${this.pedido.necesitaEnvio ? 'Entiendo que el envío se gestionará por Wallapop.' : ''} ¡Gracias!`;
+      mensaje += `\nImporte total: ${this.importeTotal}€\n`;
+      mensaje += `\n¿Podemos proceder con el pedido? ${this.pedido.necesitaEnvio ? 'Entiendo que el envío se gestionará por Wallapop.' : ''} ¡Gracias!`;
 
-    return mensaje;
-  },
+      return mensaje;
+    },
+    copiarMensajeAlPortapapeles() {
+      const message = this.generateMessage();
+      navigator.clipboard.writeText(message).then(() => {
+        alert('Mensaje copiado al portapapeles. Ábrelo manualmente en WhatsApp si es necesario.');
+      }).catch(err => {
+        console.error('Error al copiar el mensaje: ', err);
+      });
+    },
+    handleWhatsAppClick() {
+      if (!this.pedido.nombreBebe.trim()) {
+        alert('Por favor, introduce el nombre del bebé.');
+        return;
+      }
 
-  handleWhatsAppClick() {
-    if (!this.pedido.nombreBebe.trim()) {
-      alert('Por favor, introduce el nombre del bebé.');
-      return;
-    }
+      const message = this.generateMessage();
+      const encodedMessage = encodeURIComponent(message).replace(/%0A/g, '%0D%0A');
+      const phoneNumber = '34664377198';  // El número de WhatsApp
 
-    const message = this.generateMessage();
-    const encodedMessage = encodeURIComponent(message).replace(/%0A/g, '%0D%0A');
-    const phoneNumber = '34664377198';  // El número de WhatsApp
+      // Crear enlace universal de WhatsApp
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-    // Crear enlace universal de WhatsApp
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    // Abrir el enlace en una nueva ventana
-    window.open(whatsappUrl, '_blank');
-    this.mensajeEnviado = true;
-  },
+      // Abrir el enlace en una nueva ventana
+      window.open(whatsappUrl, '_blank');
+      this.mensajeEnviado = true;
+    },
     volverAtras() {
       this.$router.push('/productos');
     }
   },
   computed: {
-  importeTotal() {
-    let total = this.productoSeleccionado ? this.productoSeleccionado.precioBase : 0;
+    importeTotal() {
+      let total = this.productoSeleccionado ? this.productoSeleccionado.precioBase : 0;
 
-    if (this.productoSeleccionado && this.productoSeleccionado.opciones && this.pedido.opcionSeleccionada) {
-      const opcionSeleccionada = this.productoSeleccionado.opciones.find(opcion => opcion.id === this.pedido.opcionSeleccionada);
-      if (opcionSeleccionada) {
-        total += opcionSeleccionada.precio;
+      if (this.productoSeleccionado && this.productoSeleccionado.opciones && this.pedido.opcionSeleccionada) {
+        const opcionSeleccionada = this.productoSeleccionado.opciones.find(opcion => opcion.id === this.pedido.opcionSeleccionada);
+        if (opcionSeleccionada) {
+          total += opcionSeleccionada.precio;
+        }
       }
-    }
 
-    // Añadir coste del peluche si hay un enlace válido
-    if (this.pedido.peluche && this.isValidUrl(this.pedido.peluche)) {
-      total += 0; // Aquí puedes añadir el precio del peluche si lo deseas
-    }
+      // Añadir coste del peluche si hay un enlace válido
+      if (this.pedido.peluche && this.isValidUrl(this.pedido.peluche)) {
+        total += 0; // Aquí puedes añadir el precio del peluche si lo deseas
+      }
 
-    return total;
+      return total;
+    }
   }
-}
 
 }
 </script>
