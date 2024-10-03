@@ -20,6 +20,5 @@ Pasteles de Pañales es una aplicación web diseñada para ofrecer una experienc
 ## Nota
 Este proyecto está operativo y no se recomienda clonarlo. Para más información sobre nuestros productos y servicios, por favor, contáctanos directamente.
 
-
-https://github.com/user-attachments/assets/fb11de2a-1c55-4666-9aac-ae0717b52204
+https://github.com/user-attachments/assets/03bce12c-2125-49f3-9ee5-afa78a4df5e8
 
