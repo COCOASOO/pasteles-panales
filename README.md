@@ -12,10 +12,8 @@ Pasteles de Pañales es una aplicación web diseñada para ofrecer una experienc
 
 ## Tecnologías Utilizadas
 - **Frontend**: Vue.js, Tailwind CSS, Vite
-- **Backend**: Node.js, Express (si aplica)
-- **Base de Datos**: MongoDB (si aplica)
-- **Autenticación**: JWT (si aplica)
-- **Despliegue**: Heroku / AWS (si aplica)
+- **Dependencias**: animate.css, vue-router, vuex
+- **Hosting**: Hostinger
 
 ## Nota
 Este proyecto está operativo y no se recomienda clonarlo. Para más información sobre nuestros productos y servicios, por favor, contáctanos directamente.
