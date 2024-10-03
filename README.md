@@ -1,5 +1,7 @@
 # Pasteles de Pañales
 
+web: https://www.pastelesdepañales.es/
+
 ## Descripción
 Pasteles de Pañales es una aplicación web diseñada para ofrecer una experiencia única en la creación y gestión de pasteles de pañales personalizados. La plataforma permite a los usuarios explorar una variedad de diseños creativos, realizar pedidos y comunicarse fácilmente con el equipo a través de WhatsApp. Nuestro objetivo es proporcionar un servicio práctico y encantador para dar la bienvenida a los nuevos bebés.
 
@@ -17,3 +19,7 @@ Pasteles de Pañales es una aplicación web diseñada para ofrecer una experienc
 
 ## Nota
 Este proyecto está operativo y no se recomienda clonarlo. Para más información sobre nuestros productos y servicios, por favor, contáctanos directamente.
+
+
+https://github.com/user-attachments/assets/fb11de2a-1c55-4666-9aac-ae0717b52204
+
