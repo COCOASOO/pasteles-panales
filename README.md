@@ -1,29 +1,21 @@
-# pasteles-panales
+# Pasteles de Pañales
 
-This template should help get you started developing with Vue 3 in Vite.
+## Descripción
+Pasteles de Pañales es una aplicación web diseñada para ofrecer una experiencia única en la creación y gestión de pasteles de pañales personalizados. La plataforma permite a los usuarios explorar una variedad de diseños creativos, realizar pedidos y comunicarse fácilmente con el equipo a través de WhatsApp. Nuestro objetivo es proporcionar un servicio práctico y encantador para dar la bienvenida a los nuevos bebés.
 
-## Recommended IDE Setup
+## Funcionalidades
+- **Exploración de Productos**: Navega a través de una amplia gama de pasteles de pañales y regalos para bebés.
+- **Personalización**: Opción de personalizar los pasteles de pañales según las preferencias del cliente.
+- **Proceso de Pedido**: Realiza pedidos de manera sencilla a través de WhatsApp, con seguimiento de cada paso del proceso.
+- **Información Detallada**: Acceso a descripciones detalladas de cada producto, incluyendo materiales y características.
+- **Blog y Curiosidades**: Sección dedicada a artículos y consejos sobre la creación y regalo de pasteles de pañales.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Tecnologías Utilizadas
+- **Frontend**: Vue.js, Tailwind CSS, Vite
+- **Backend**: Node.js, Express (si aplica)
+- **Base de Datos**: MongoDB (si aplica)
+- **Autenticación**: JWT (si aplica)
+- **Despliegue**: Heroku / AWS (si aplica)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+## Nota
+Este proyecto está operativo y no se recomienda clonarlo. Para más información sobre nuestros productos y servicios, por favor, contáctanos directamente.
